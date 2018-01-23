@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>soundTest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<audio id="0" src="audio/bells_chimes/0.wav" preload="auto"></audio> 
+<audio id="1" src="audio/bells_chimes/1.wav" preload="auto"></audio>    
+<audio id="2" src="audio/bells_chimes/2.wav" preload="auto"></audio>    
+<audio id="3" src="audio/bells_chimes/3.wav" preload="auto"></audio>    
+<audio id="4" src="audio/bells_chimes/4.wav" preload="auto"></audio>
+<audio id="5" src="audio/bells_chimes/5.wav" preload="auto"></audio>
+<audio id="6" src="audio/bells_chimes/6.wav" preload="auto"></audio>
+<audio id="7" src="audio/bells_chimes/7.wav" preload="auto"></audio>
+<audio id="8" src="audio/bells_chimes/8.wav" preload="auto"></audio>    
+<audio id="9" src="audio/bells_chimes/9.wav" preload="auto"></audio>    
+<audio id="10" src="audio/bells_chimes/10.wav" preload="auto"></audio>    
+<audio id="11" src="audio/bells_chimes/11.wav" preload="auto"></audio>
+<audio id="12" src="audio/bells_chimes/12.wav" preload="auto"></audio>
+<audio id="13" src="audio/bells_chimes/13.wav" preload="auto"></audio>
+<audio id="14" src="audio/bells_chimes/14.wav" preload="auto"></audio>
+<audio id="15" src="audio/bells_chimes/15.wav" preload="auto"></audio>
+<audio id="16" src="audio/bells_chimes/16.wav" preload="auto"></audio>
+<audio id="17" src="audio/bells_chimes/17.wav" preload="auto"></audio>
+<audio id="18" src="audio/bells_chimes/18.wav" preload="auto"></audio>
+<audio id="19" src="audio/bells_chimes/19.wav" preload="auto"></audio>
+    
+    
+<audio id="whitenoise" src="audio/whitenoise/whitenoise.wav" preload="auto"></audio>
+    
+<audio id="oceansounds" src="audio/ocean_sounds/water-sounds-ocean-ocean-waves-40.wav" preload="auto"></audio>
+    
+    
+<body>
+    <div class="title">
+        <h1>soundTest</h1>
+        
+
+        <div class="vertical-menu">
+            <a href="#" class="active">Choose a sound</a>
+            <a href="javascript:setSound('chimes');">Chimes</a><br />
+            <a href="javascript:setSound('whitenoise');">White Noise</a><br />
+            <a href="javascript:setSound('oceansounds');">Ocean Sounds</a><br />
+        </div>
+    </div>
+    
+    <div id="message">Start Buttons:</div>
+        <div id="buttons"></div>
+        <div id="startButtons">
+            <button id="startSample" type="button" onclick="playSound()" class="btn">Play Sample</button>
+            <button id="startLoop" type="button" onclick="playLoop()" class="btn">Play Loop</button>            
+        </div>
+    
+    <div id="message">Stop Buttons:</div>        
+        <div id="stopButtons">
+            <button id="stop" type="button" onclick="stopPlaying()" class="btn">Stop</button>
+        </div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
