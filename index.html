@@ -34,6 +34,8 @@
     
 <audio id="oceansounds" src="audio/ocean_sounds/water-sounds-ocean-ocean-waves-40.wav" preload="auto"></audio>
     
+
+    
     
 <body>
     <div class="title">
@@ -52,7 +54,8 @@
         <div id="buttons"></div>
         <div id="startButtons">
             <button id="startSample" type="button" onclick="playSound()" class="btn">Play Sample</button>
-            <button id="startLoop" type="button" onclick="playLoop()" class="btn">Play Loop</button>            
+            <button id="startLoop" type="button" onclick="playLoop()" class="btn">Play Loop</button>  
+            <button id="startAnalyser" type="button" onclick="analyserFunc()" class="btn">Start Analyser</button> 
         </div>
     
     <div id="message">Stop Buttons:</div>        
@@ -60,6 +63,18 @@
             <button id="stop" type="button" onclick="stopPlaying()" class="btn">Stop</button>
         </div>
 
+    <div id="bar">
+        <div id="P10" class="p"></div>
+        <div id="P20" class="p"></div>
+        <div id="P30" class="p"></div>
+        <div id="P40" class="p"></div>
+        <div id="P50" class="p"></div>
+        <div id="P60" class="p"></div>
+        <div id="P70" class="p"></div>
+        <div id="P80" class="p"></div>
+        <div id="P90" class="p"></div>
+    </div>
+    
 <script src="script.js"></script>
 
 </body>

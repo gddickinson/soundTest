@@ -12,7 +12,10 @@ var loopFlag = false;
 var timerID = '';
 var chimesFlag = false;
 
+var analyserFlag = false;
+
 var audioLoop = new Array();
+
 audioLoop['channel'] = new Audio();
 audioLoop['finished'] = -1;
 
@@ -136,4 +139,34 @@ function loopChimes(){
 }
 
 
+function analyserFunc() {
+    
+    analyserFlag = true;
+    
+    var audioCtx = new AudioContext();
+    var analyser = audioCtx.createAnalyser();
+    var source = audioCtx.createMediaElementSource(oceansounds);
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+    analyser.fftSize = 32;
 
+    var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+    function renderFrame() {
+        analyser.getByteFrequencyData(frequencyData);
+        P10.style.height = ((frequencyData[0] * 100) / 256) + "%";
+        P20.style.height = ((frequencyData[1] * 100) / 256) + "%";
+        P30.style.height = ((frequencyData[2] * 100) / 256) + "%";
+        P40.style.height = ((frequencyData[3] * 100) / 256) + "%";
+        P50.style.height = ((frequencyData[4] * 100) / 256) + "%";
+        P60.style.height = ((frequencyData[5] * 100) / 256) + "%";
+        P70.style.height = ((frequencyData[6] * 100) / 256) + "%";
+        P80.style.height = ((frequencyData[7] * 100) / 256) + "%";
+        P90.style.height = ((frequencyData[8] * 100) / 256) + "%";
+        console.log(frequencyData)
+        requestAnimationFrame(renderFrame);
+    }
+    oceansounds.pause();
+    oceansounds.play();
+    renderFrame();
+}
