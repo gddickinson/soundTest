@@ -101,6 +101,15 @@ function stopPlaying(){
         audioLoop['channel'].pause();
         audioLoop['channel'].currentTime = 0;     
     }
+    if(analyserFlag == true){
+        analyserFlag = false;
+        oceansounds.pause();
+        oceansounds.currentTime = 0; 
+        audioCtx.close();
+        analyser.close();
+        source,close();
+        
+}
 }
 
 function setSound(s){
@@ -169,4 +178,10 @@ function analyserFunc() {
     oceansounds.pause();
     oceansounds.play();
     renderFrame();
+    if (analyserFlag == true){
+        renderFrame();
+    }
+    else{
+        return;
+    }
 }
