@@ -31,7 +31,7 @@
 #bar {
     position: fixed;
     top: 60%;
-    left: 40%;
+    left: 1%;
     width: 40%;
     height: 40%;
     -webkit-transition: 0.1s ease all;
