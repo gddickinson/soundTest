@@ -109,7 +109,7 @@ Contributions to SoundTest are welcome! Feel free to submit pull requests or ope
 
 ## License
 
-This project is available under an open source license.
+Released under the [MIT licence](LICENSE). The sound samples in `audio/` are third-party: see [THIRD_PARTY.md](THIRD_PARTY.md).
 
 ## Credits
 
