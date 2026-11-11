@@ -1,107 +1,128 @@
 # SoundTest
 
-A web-based audio player and visualizer with various sound options and playback modes.
+*Sleeping loops and more.* A sound mixer that runs in your browser: layer ocean waves, noise, bells, wind, old synth
+instruments and sci-fi glitches, loop them seamlessly or scatter them at random, balance them like a mixing desk, and
+let a sleep timer fade everything out.
 
-## Live Demo
+**Live:** [https://gddickinson.github.io/soundTest/](https://gddickinson.github.io/soundTest/) ·
+the original page: [classic/](https://gddickinson.github.io/soundTest/classic/)
 
-Try it now: [https://gddickinson.github.io/soundTest/](https://gddickinson.github.io/soundTest/)
+![The mixer playing the "Wind chimes" preset](docs/img/mixer.png)
+
+| Home | Visualiser (orbit) | Phone |
+|---|---|---|
+| ![Home page](docs/img/home.png) | ![Orbit visualiser](docs/img/orbit.png) | ![Mixer at phone width](docs/img/phone_mixer.png) |
 
 ## Features
 
-SoundTest is a simple yet powerful audio application that offers:
+- **88 sounds in 6 categories**: ocean & water (11), noise (3), bells & chimes (24), wind & weather (4),
+  instruments (10) and sci-fi glitches (36), with search and category filters. About 19 minutes of audio.
+- **Mixer** (WebAudio): per-layer volume, pan, mute and solo, live level meters, master volume, up to 24 layers.
+  Changes glide instead of clicking, and a gentle limiter on the master stops many layers from clipping.
+- **Seamless loops**: each loop's last 1.5 s is crossfaded (equal power) into its start, then played with
+  `AudioBufferSourceNode.loop`, so the loop point is sample-accurate and has no click at the seam.
+- **Scatter mode** for short sounds: every N seconds (±25 %) the sound plays with a chance you set. With 2 s and 40 %
+  this is the original page's chime loop. Hits are scheduled ahead on the audio clock.
+- **Crossfades**: loading a preset or saved mix crossfades from what is playing over 2.5 s.
+- **Sleep timer**: 5 minutes to 2 hours, fading out gradually over the last 1–30 minutes (a smooth curve on its own
+  gain stage), then pausing.
+- **Presets, saved mixes and share links**: six built-in mixes; mixes saved in your browser (`localStorage`); and the
+  address bar always holds a link that rebuilds the current mix exactly.
+- **Live visualiser**: spectrum (log-frequency bars with peak caps), waveform and orbit views of the master output,
+  on the mixer page and full screen.
+- **Lazy loading**: a WAV is downloaded only when it is used, with progress per file and in the player bar.
+- **Keyboard control**: press `?` on any page for the list.
 
-- Multiple sound categories (Chimes, White Noise, Ocean Sounds)
-- Single-play and loop modes
-- Multi-channel audio support for overlapping sounds
-- Real-time audio visualization with frequency analyzer
-- Randomized chime patterns with configurable intervals
+## How to use
 
-## How to Use
+Open the **Mixer**, press `+` next to a sound (or ▶ to preview it once), or start from a **Preset**. Each layer gets a
+strip: volume, pan, Mute, Solo, and Loop / Scatter (with "every" and "chance" for scatter). The player bar at the
+bottom stays on every page.
 
-### Sound Selection
+| Key | Action |
+|---|---|
+| Space | Play / pause |
+| 1–9, ← / → | Select a layer |
+| ↑ / ↓ | Volume of the selected layer (master if there are none) |
+| M / S / L | Mute / solo / loop-or-scatter for the selected layer |
+| Delete | Remove the selected layer |
+| [ / ] | Master volume |
+| / | Search the library |
+| V | Next visualiser style |
+| T | Start / cancel the sleep timer |
+| G | Go to the mixer |
+| ? | Show the shortcuts |
 
-Use the vertical menu to select a sound category:
-- **Chimes**: A collection of 20 different bell/chime sounds
-- **White Noise**: Continuous white noise for focus or relaxation
-- **Ocean Sounds**: Calming ocean wave sounds
+### Share links
 
-### Playback Controls
+The mix is stored in the URL hash, for example
+`#/mixer?mix=v1~m80~ocean-waves-40.70.0.L~chime-3.45.-30.S20x40.s`:
+version, master volume %, then per layer `id.volume%.pan%.mode[.flags]`, where mode `L` is loop and `S20x40` is scatter
+every 2.0 s with a 40 % chance, and flags `m` = muted, `s` = solo. Unknown sounds and out-of-range values are ignored or
+clamped (`static/mix_codec.js`).
 
-The application offers several playback options:
+## Run locally
 
-- **Play Sample**: Play a single instance of the selected sound
-  - For chimes, this plays a random chime from the collection
-  
-- **Play Loop**: Start a continuous loop of the selected sound
-  - For chimes, this creates a randomized pattern with 2-second intervals
-  - For white noise and ocean sounds, this loops the audio continuously
-  
-- **Start Analyser**: Activates the frequency analyzer visualization (works best with ocean sounds)
-  - Shows real-time frequency data as animated blue bars
-  
-- **Stop**: Stops all audio playback and resets the audio state
+It is a static site: no build step, no server code.
 
-## Technical Details
+```bash
+git clone https://github.com/gddickinson/soundTest.git
+cd soundTest
+python3 -m http.server 8000
+# open http://localhost:8000/
+```
 
-### Audio Implementation
+Any static file server works. Opening `index.html` straight from disk does not: browsers block ES modules and audio
+fetches from `file://`.
 
-The application uses several key techniques for audio handling:
+## Tests
 
-- Multiple audio channels for simultaneous sound playback
-- Dynamic audio source selection based on user choice
-- Randomized sound selection algorithm for chimes
-- HTML5 Audio API for basic playback
-- Web Audio API for analysis and visualization
+```bash
+node --test tests/                 # mix links, sleep fade, seamless loops, scatter, sound catalogue, classic page
+python -m pytest -q tests/         # Playwright smoke test (needs pytest + playwright, and Chrome or Playwright's Chromium)
+node scripts/make_catalog.mjs      # regenerate static/catalog_data.js after adding/removing WAVs
+python scripts/screenshots.py --phone   # refresh docs/img/
+```
 
-### Audio Visualization
+The smoke test serves the repository with `python -m http.server`, opens every page (no console errors, no horizontal
+scroll at 390 px), plays a preset and checks that sound comes out and the loops are crossfaded, rebuilds a mix from a
+share link, drives mute/solo/volume from the keyboard, runs a 4-second sleep timer, and clicks through the classic page.
 
-The frequency analyzer:
-- Uses Web Audio API's `AnalyserNode`
-- Samples audio at 32 FFT size
-- Visualizes 9 frequency bands
-- Updates in real-time using `requestAnimationFrame`
-
-### Code Structure
-
-- `index.html`: Main application structure and audio elements
-- `style.css`: Styling for UI elements and visualizer
-- `script.js`: Core functionality including:
-  - Audio channel management
-  - Playback control
-  - Sound selection
-  - Randomization functions
-  - Frequency analysis and visualization
-
-## Project Structure
+## Project structure
 
 ```
 soundTest/
-├── index.html          # Main HTML document
-├── style.css           # CSS styling
-├── script.js           # JavaScript functionality
-├── README.md           # Project documentation
-└── audio/              # Audio files directory
-    ├── bells_chimes/   # Chime sound files (0.wav through 19.wav)
-    ├── whitenoise/     # White noise audio
-    └── ocean_sounds/   # Ocean wave sounds
+├── index.html            # the mixer site (hash router: #/, #/mixer, #/visualiser, #/presets, #/credits, #/about)
+├── static/               # ES modules + styles (see INTERFACE.md for a file-by-file map)
+├── classic/              # the original page (index.html, script.js, style.css), bugs fixed
+├── audio/                # the 88 WAV samples (third-party, see below)
+├── scripts/              # make_catalog.mjs (sound list from WAV headers), screenshots.py
+├── tests/                # node tests (*.test.mjs) and the Playwright smoke test (test_smoke.py)
+└── docs/img/             # screenshots
 ```
 
-## Browser Compatibility
+## The classic page
 
-This application is built with standard Web APIs and should work in all modern browsers that support:
-- HTML5 Audio
-- Web Audio API
-- ECMAScript 6 features
+The first version is kept at [`classic/`](classic/): choose Chimes, White Noise or Ocean Sounds; Play Sample, Play Loop
+(chimes: a random chime every 2 s with a 40 % chance, sometimes two), Start Analyser (nine bars; it always analyses
+the ocean recording) and Stop. These bugs were fixed in it:
 
-## Future Enhancements
+- chime 19 could never be picked (`getRndInteger(0, 19)` excludes 19);
+- Play Sample / Play Loop before choosing a sound threw an error;
+- channels were never freed if a WAV's duration was not known yet, so playback stopped after 10 clicks;
+- Stop after Start Analyser threw `audioCtx is not defined`; the analyser could not be restarted; it ran two render
+  loops and logged to the console on every frame;
+- the page downloaded all 22 of its WAVs (~47 MB) on every visit (`preload="auto"`).
 
-Potential improvements for future versions:
-- Additional sound categories
-- Customizable playback parameters
-- More advanced visualization options
-- Customizable chime patterns
-- Volume and EQ controls
-- Save and load favorite settings
+## Browser compatibility
+
+Any current browser with the Web Audio API and ES modules (Chrome, Edge, Firefox, Safari).
+
+## Ideas
+
+- Serving compressed copies of the WAVs (Opus or AAC/MP3) would cut downloads roughly tenfold; not done, as it adds
+  files and changes the audio (needs a decision).
+- More visualiser styles; per-layer EQ.
 
 ## Contributing
 
@@ -109,7 +130,8 @@ Contributions to SoundTest are welcome! Feel free to submit pull requests or ope
 
 ## License
 
-Released under the [MIT licence](LICENSE). The sound samples in `audio/` are third-party: see [THIRD_PARTY.md](THIRD_PARTY.md).
+Released under the [MIT licence](LICENSE). The sound samples in `audio/` are third-party: see [THIRD_PARTY.md](THIRD_PARTY.md)
+and the site's Credits page.
 
 ## Credits
 

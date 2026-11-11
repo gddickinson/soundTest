@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 
-const SCRIPT = new URL('../script.js', import.meta.url);
+const SCRIPT = new URL('../classic/script.js', import.meta.url);
 
 // Fake <audio> element / Audio object: records what was played; `ended` is set by the test.
 class FakeAudio {

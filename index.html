@@ -1,80 +1,30 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>soundTest</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>soundTest · sleeping loops and more</title>
+<meta name="description" content="A WebAudio mixer for 88 sound loops: ocean, noise, bells, wind, instruments and sci-fi glitches. Seamless loops, solo/mute, sleep timer with fade-out, presets, share links and a live visualiser.">
+<link rel="icon" href="static/icon.svg">
+<link rel="stylesheet" href="static/style.css">
+<link rel="stylesheet" href="static/style_app.css">
 </head>
-
-
 <body>
-<audio id="0" src="audio/bells_chimes/0.wav" preload="none"></audio> 
-<audio id="1" src="audio/bells_chimes/1.wav" preload="none"></audio>    
-<audio id="2" src="audio/bells_chimes/2.wav" preload="none"></audio>    
-<audio id="3" src="audio/bells_chimes/3.wav" preload="none"></audio>    
-<audio id="4" src="audio/bells_chimes/4.wav" preload="none"></audio>
-<audio id="5" src="audio/bells_chimes/5.wav" preload="none"></audio>
-<audio id="6" src="audio/bells_chimes/6.wav" preload="none"></audio>
-<audio id="7" src="audio/bells_chimes/7.wav" preload="none"></audio>
-<audio id="8" src="audio/bells_chimes/8.wav" preload="none"></audio>    
-<audio id="9" src="audio/bells_chimes/9.wav" preload="none"></audio>    
-<audio id="10" src="audio/bells_chimes/10.wav" preload="none"></audio>    
-<audio id="11" src="audio/bells_chimes/11.wav" preload="none"></audio>
-<audio id="12" src="audio/bells_chimes/12.wav" preload="none"></audio>
-<audio id="13" src="audio/bells_chimes/13.wav" preload="none"></audio>
-<audio id="14" src="audio/bells_chimes/14.wav" preload="none"></audio>
-<audio id="15" src="audio/bells_chimes/15.wav" preload="none"></audio>
-<audio id="16" src="audio/bells_chimes/16.wav" preload="none"></audio>
-<audio id="17" src="audio/bells_chimes/17.wav" preload="none"></audio>
-<audio id="18" src="audio/bells_chimes/18.wav" preload="none"></audio>
-<audio id="19" src="audio/bells_chimes/19.wav" preload="none"></audio>
-    
-    
-<audio id="whitenoise" src="audio/whitenoise/whitenoise.wav" preload="none"></audio>
-    
-<audio id="oceansounds" src="audio/ocean_sounds/water-sounds-ocean-ocean-waves-40.wav" preload="none"></audio>
-
-    <div class="title">
-        <h1>soundTest</h1>
-        
-
-        <div class="vertical-menu">
-            <a href="#" class="active">Choose a sound</a>
-            <a href="javascript:setSound('chimes');">Chimes</a><br />
-            <a href="javascript:setSound('whitenoise');">White Noise</a><br />
-            <a href="javascript:setSound('oceansounds');">Ocean Sounds</a><br />
-        </div>
-    </div>
-    
-    <div id="message">Start Buttons:</div>
-        <div id="buttons"></div>
-        <div id="startButtons">
-            <button id="startSample" type="button" onclick="playSound()" class="btn">Play Sample</button>
-            <button id="startLoop" type="button" onclick="playLoop()" class="btn">Play Loop</button>  
-            <button id="startAnalyser" type="button" onclick="analyserFunc()" class="btn">Start Analyser</button> 
-        </div>
-    
-    <div class="message">Stop Buttons:</div>        
-        <div id="stopButtons">
-            <button id="stop" type="button" onclick="stopPlaying()" class="btn">Stop</button>
-        </div>
-
-    <div id="bar">
-        <div id="P10" class="p"></div>
-        <div id="P20" class="p"></div>
-        <div id="P30" class="p"></div>
-        <div id="P40" class="p"></div>
-        <div id="P50" class="p"></div>
-        <div id="P60" class="p"></div>
-        <div id="P70" class="p"></div>
-        <div id="P80" class="p"></div>
-        <div id="P90" class="p"></div>
-    </div>
-    
-<script src="script.js"></script>
-
+<canvas id="bg" aria-hidden="true"></canvas>
+<header class="top">
+  <a class="brand" href="#/"><span class="mark"></span>soundTest</a>
+  <nav class="groups" aria-label="Main">
+    <a href="#/mixer" data-nav="mixer">Mixer</a>
+    <a href="#/visualiser" data-nav="visualiser">Visualiser</a>
+    <a href="#/presets" data-nav="presets">Presets</a>
+    <a href="#/credits" data-nav="credits">Credits</a>
+    <a href="#/about" data-nav="about">About</a>
+  </nav>
+  <div class="right"><a class="small mute" href="classic/">Classic page</a><a class="small mute" href="https://github.com/gddickinson/soundTest" target="_blank" rel="noopener">GitHub</a></div>
+</header>
+<main id="app" tabindex="-1"></main>
+<footer class="foot">soundTest · <a href="https://github.com/gddickinson/soundTest">source on GitHub</a> · <a href="#/credits">sound credits</a> · <span id="mode"></span></footer>
+<div id="dock" role="region" aria-label="Player"></div>
+<script type="module" src="static/main.js"></script>
 </body>
-
 </html>
