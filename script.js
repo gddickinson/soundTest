@@ -44,7 +44,7 @@ function playSound() {
     if (playingFlag == true) {
         
         if(soundChoice == 'chimes'){
-            chime = getRndInteger(0,19);
+            chime = getRndInteger(0,20);
             play_multi_sound(chime);
         }
         else{
@@ -62,14 +62,14 @@ function playRandSound() {
         if(soundChoice == 'chimes'){
             
             if(getRndInteger(0,100)<40){            
-                chime = getRndInteger(0,19);
+                chime = getRndInteger(0,20);
                 play_multi_sound(chime);
             } 
             
             if(getRndInteger(0,100)<5){            
-                chime = getRndInteger(0,19);
+                chime = getRndInteger(0,20);
                 play_multi_sound(chime);
-                chime = getRndInteger(0,19);
+                chime = getRndInteger(0,20);
                 play_multi_sound(chime);
             }
             
