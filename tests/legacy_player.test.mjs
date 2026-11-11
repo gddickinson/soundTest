@@ -62,3 +62,30 @@ test('channels are reused once their sound has ended, even if the duration was u
   }
   assert.equal(FakeAudio.played.length, 25);
 });
+
+test('Start Analyser, Stop, Start Analyser again: no errors, one render loop, no console spam', () => {
+  const { ctx } = loadPlayer();
+  let sources = 0, frames = 0, logs = 0;
+  class FakeCtx {
+    createAnalyser() { return { fftSize: 0, frequencyBinCount: 16, connect() {}, getByteFrequencyData() {} }; }
+    createMediaElementSource() { if (++sources > 1) throw new Error('already connected'); return { connect() {} }; }
+    get destination() { return {}; }
+    resume() { return Promise.resolve(); } suspend() { return Promise.resolve(); }
+  }
+  ctx.AudioContext = FakeCtx;
+  const pending = new Map(); let next = 1;
+  ctx.requestAnimationFrame = fn => { frames++; pending.set(next, fn); return next++; };
+  ctx.cancelAnimationFrame = id => pending.delete(id);
+  ctx.console = { log: () => logs++, warn() {}, error() {} };
+  for (const k of ['P10', 'P20', 'P30', 'P40', 'P50', 'P60', 'P70', 'P80', 'P90']) ctx[k] = { style: {} };
+  ctx.oceansounds = ctx.document.getElementById('oceansounds');
+  const runFrames = n => { for (let i = 0; i < n; i++) { const fns = [...pending.values()]; pending.clear(); fns.forEach(f => f()); } };
+  ctx.analyserFunc();
+  frames = 0; runFrames(3);
+  assert.equal(frames, 3, 'exactly one animation loop');
+  assert.equal(logs, 0, 'no per-frame console output');
+  assert.doesNotThrow(() => ctx.stopPlaying());
+  assert.equal(pending.size, 0, 'Stop ends the render loop');
+  assert.doesNotThrow(() => ctx.analyserFunc());
+  assert.equal(sources, 1);
+});

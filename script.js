@@ -98,6 +98,7 @@ function stopPlaying(){
  
     if (chimesFlag == true){
         clearInterval(timerID);
+        chimesFlag = false;
     }
     
     if(loopFlag == true){
@@ -107,14 +108,8 @@ function stopPlaying(){
         audioLoop['channel'].currentTime = 0;     
     }
     if(analyserFlag == true){
-        analyserFlag = false;
-        oceansounds.pause();
-        oceansounds.currentTime = 0; 
-        audioCtx.close();
-        analyser.close();
-        source,close();
-        
-}
+        stopAnalyser();
+    }
 }
 
 function setSound(s){
@@ -157,40 +152,46 @@ function loopChimes(){
 }
 
 
+// The analyser graph is built once (a media element can only be connected to one source node) and reused.
+var audioCtx = null;
+var analyser = null;
+var analyserSource = null;
+var analyserFrame = 0;
+
 function analyserFunc() {
-    
+    if (analyserFlag == true) return;                       // already running
     analyserFlag = true;
-    
-    var audioCtx = new AudioContext();
-    var analyser = audioCtx.createAnalyser();
-    var source = audioCtx.createMediaElementSource(oceansounds);
-    source.connect(analyser);
-    analyser.connect(audioCtx.destination);
-    analyser.fftSize = 32;
+
+    if (audioCtx == null) {
+        audioCtx = new AudioContext();
+        analyser = audioCtx.createAnalyser();
+        analyserSource = audioCtx.createMediaElementSource(oceansounds);
+        analyserSource.connect(analyser);
+        analyser.connect(audioCtx.destination);
+        analyser.fftSize = 32;
+    }
+    audioCtx.resume();
 
     var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+    var bars = [P10, P20, P30, P40, P50, P60, P70, P80, P90];
 
     function renderFrame() {
+        if (analyserFlag == false) return;
         analyser.getByteFrequencyData(frequencyData);
-        P10.style.height = ((frequencyData[0] * 100) / 256) + "%";
-        P20.style.height = ((frequencyData[1] * 100) / 256) + "%";
-        P30.style.height = ((frequencyData[2] * 100) / 256) + "%";
-        P40.style.height = ((frequencyData[3] * 100) / 256) + "%";
-        P50.style.height = ((frequencyData[4] * 100) / 256) + "%";
-        P60.style.height = ((frequencyData[5] * 100) / 256) + "%";
-        P70.style.height = ((frequencyData[6] * 100) / 256) + "%";
-        P80.style.height = ((frequencyData[7] * 100) / 256) + "%";
-        P90.style.height = ((frequencyData[8] * 100) / 256) + "%";
-        console.log(frequencyData)
-        requestAnimationFrame(renderFrame);
+        for (var i = 0; i < bars.length; i++) {
+            bars[i].style.height = ((frequencyData[i] * 100) / 256) + "%";
+        }
+        analyserFrame = requestAnimationFrame(renderFrame);
     }
     oceansounds.pause();
     oceansounds.play();
     renderFrame();
-    if (analyserFlag == true){
-        renderFrame();
-    }
-    else{
-        return;
-    }
+}
+
+function stopAnalyser() {
+    analyserFlag = false;
+    cancelAnimationFrame(analyserFrame);
+    oceansounds.pause();
+    oceansounds.currentTime = 0;
+    [P10, P20, P30, P40, P50, P60, P70, P80, P90].forEach(function (b) { b.style.height = "0%"; });
 }
