@@ -26,19 +26,24 @@ for (a=0;a<channel_max;a++) {									// prepare the channels
 	}
 
 function play_multi_sound(s) {
-	for (a=0;a<audiochannels.length;a++) {
-		thistime = new Date();
-		if (audiochannels[a]['finished'] < thistime.getTime()) {			// is this channel finished?
-            audiochannels[a]['finished'] = thistime.getTime() + document.getElementById(s).duration*1000;
-            audiochannels[a]['channel'].src = document.getElementById(s).src;
-            audiochannels[a]['channel'].load();
-            audiochannels[a]['channel'].play();
+    var el = document.getElementById(s);
+    if (!el) return;                                        // no sound chosen yet
+	for (var a=0;a<audiochannels.length;a++) {
+        var ch = audiochannels[a]['channel'];
+		if (ch.paused || ch.ended) {			// is this channel free? (duration may be unknown before loading)
+            ch.src = el.src;
+            ch.load();
+            ch.play();
             break;
             }
         }
     }
 
 function playSound() {
+    if (soundChoice == '') {
+        document.getElementById('message').textContent = 'Choose a sound first:';
+        return;
+    }
     playingFlag = true;
     
     if (playingFlag == true) {
@@ -122,6 +127,10 @@ function getRndInteger(min, max) {
 }
 
 function playLoop(){  
+    if (soundChoice == '') {
+        document.getElementById('message').textContent = 'Choose a sound first:';
+        return;
+    }
     loopFlag = true;
     document.getElementById('startLoop').style.display = 'none';
     if(soundChoice == 'chimes'){

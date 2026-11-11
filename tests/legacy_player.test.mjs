@@ -44,3 +44,21 @@ test('every one of the 20 chimes can be played (including 19.wav)', () => {
   assert.ok(seen.has('audio/bells_chimes/19.wav'), 'chime 19 never selected');
   assert.equal(seen.size, 20);
 });
+
+test('Play Sample before choosing a sound does not throw', () => {
+  const { ctx } = loadPlayer();
+  assert.doesNotThrow(() => ctx.playSound());
+  assert.doesNotThrow(() => ctx.playLoop());
+  assert.equal(FakeAudio.played.length, 0);
+});
+
+test('channels are reused once their sound has ended, even if the duration was unknown', () => {
+  const { ctx } = loadPlayer();
+  ctx.setSound('whitenoise');
+  for (let i = 0; i < 25; i++) {
+    ctx.playSound();
+    // the sound finishes before the next click
+    for (const c of ctx.audiochannels) { c.channel.ended = true; c.channel.paused = true; }
+  }
+  assert.equal(FakeAudio.played.length, 25);
+});
