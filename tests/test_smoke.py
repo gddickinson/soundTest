@@ -79,3 +79,11 @@ def test_legacy_player_buttons(page, base):
     page.click("#startLoop")
     page.click("#stop")
     assert page.errors == []
+
+
+def test_legacy_player_does_not_download_every_wav_on_load(page, base):
+    wavs = []
+    page.on("request", lambda r: wavs.append(r.url) if r.url.endswith(".wav") else None)
+    page.goto(base + LEGACY)
+    page.wait_for_timeout(1500)
+    assert wavs == []
