@@ -1,0 +1,1589 @@
+{
+ "files": {
+  "audio/Alesis-Fusion-Acoustic-Bass-C2.wav": {
+   "ch": 2,
+   "frames": 127782,
+   "m4a": {
+    "kb": 48,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 131072
+   },
+   "opus": {
+    "kb": 36,
+    "priming": 312,
+    "rate": 48000,
+    "total": 140160
+   },
+   "sr": 44100,
+   "wav_kb": 499
+  },
+  "audio/Alesis-Fusion-Sitar-C4.wav": {
+   "ch": 2,
+   "frames": 106915,
+   "m4a": {
+    "kb": 40,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 110592
+   },
+   "opus": {
+    "kb": 43,
+    "priming": 312,
+    "rate": 48000,
+    "total": 117120
+   },
+   "sr": 44100,
+   "wav_kb": 418
+  },
+  "audio/Alesis-S4-Plus-Bari-Sax-C2.wav": {
+   "ch": 2,
+   "frames": 81856,
+   "m4a": {
+    "kb": 31,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 84992
+   },
+   "opus": {
+    "kb": 28,
+    "priming": 312,
+    "rate": 48000,
+    "total": 90240
+   },
+   "sr": 44100,
+   "wav_kb": 320
+  },
+  "audio/Alesis-Sanctuary-QCard-Wind.wav": {
+   "ch": 2,
+   "frames": 502727,
+   "m4a": {
+    "kb": 182,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 505856
+   },
+   "opus": {
+    "kb": 130,
+    "priming": 312,
+    "rate": 48000,
+    "total": 548160
+   },
+   "sr": 44100,
+   "wav_kb": 1964
+  },
+  "audio/Bowed-Bass-C2.wav": {
+   "ch": 2,
+   "frames": 148144,
+   "m4a": {
+    "kb": 55,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 151552
+   },
+   "opus": {
+    "kb": 48,
+    "priming": 312,
+    "rate": 48000,
+    "total": 162240
+   },
+   "sr": 44100,
+   "wav_kb": 579
+  },
+  "audio/Casio-MT-600-Typhoon-Sound.wav": {
+   "ch": 2,
+   "frames": 168017,
+   "m4a": {
+    "kb": 62,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 172032
+   },
+   "opus": {
+    "kb": 38,
+    "priming": 312,
+    "rate": 48000,
+    "total": 183360
+   },
+   "sr": 44100,
+   "wav_kb": 657
+  },
+  "audio/Casio-VZ-10M-Astral-C2.wav": {
+   "ch": 2,
+   "frames": 284438,
+   "m4a": {
+    "kb": 104,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 287744
+   },
+   "opus": {
+    "kb": 57,
+    "priming": 312,
+    "rate": 48000,
+    "total": 310080
+   },
+   "sr": 44100,
+   "wav_kb": 1111
+  },
+  "audio/Casio-VZ-10M-Buzzy-Deep-Bass-C1.wav": {
+   "ch": 2,
+   "frames": 96522,
+   "m4a": {
+    "kb": 37,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 100352
+   },
+   "opus": {
+    "kb": 24,
+    "priming": 312,
+    "rate": 48000,
+    "total": 105600
+   },
+   "sr": 44100,
+   "wav_kb": 377
+  },
+  "audio/E-Mu-Proteus-2-Flute-C5.wav": {
+   "ch": 2,
+   "frames": 100911,
+   "m4a": {
+    "kb": 38,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 104448
+   },
+   "opus": {
+    "kb": 37,
+    "priming": 312,
+    "rate": 48000,
+    "total": 110400
+   },
+   "sr": 44100,
+   "wav_kb": 394
+  },
+  "audio/E-Mu-Proteus-FX-Wacky-Snare.wav": {
+   "ch": 2,
+   "frames": 18131,
+   "m4a": {
+    "kb": 8,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 21504
+   },
+   "opus": {
+    "kb": 5,
+    "priming": 312,
+    "rate": 48000,
+    "total": 20160
+   },
+   "sr": 44100,
+   "wav_kb": 71
+  },
+  "audio/Ensoniq-ESQ-1-Wind.wav": {
+   "ch": 2,
+   "frames": 940225,
+   "m4a": {
+    "kb": 339,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 944128
+   },
+   "opus": {
+    "kb": 250,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1024320
+   },
+   "sr": 44100,
+   "wav_kb": 3673
+  },
+  "audio/Kawai-K5000W-Thunder.wav": {
+   "ch": 2,
+   "frames": 148348,
+   "m4a": {
+    "kb": 55,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 151552
+   },
+   "opus": {
+    "kb": 34,
+    "priming": 312,
+    "rate": 48000,
+    "total": 162240
+   },
+   "sr": 44100,
+   "wav_kb": 580
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch1.wav": {
+   "ch": 2,
+   "frames": 123436,
+   "m4a": {
+    "kb": 46,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 126976
+   },
+   "opus": {
+    "kb": 38,
+    "priming": 312,
+    "rate": 48000,
+    "total": 135360
+   },
+   "sr": 44100,
+   "wav_kb": 482
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch10.wav": {
+   "ch": 2,
+   "frames": 82809,
+   "m4a": {
+    "kb": 32,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 86016
+   },
+   "opus": {
+    "kb": 19,
+    "priming": 312,
+    "rate": 48000,
+    "total": 91200
+   },
+   "sr": 44100,
+   "wav_kb": 324
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch11.wav": {
+   "ch": 2,
+   "frames": 88542,
+   "m4a": {
+    "kb": 34,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 92160
+   },
+   "opus": {
+    "kb": 24,
+    "priming": 312,
+    "rate": 48000,
+    "total": 96960
+   },
+   "sr": 44100,
+   "wav_kb": 346
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch12.wav": {
+   "ch": 2,
+   "frames": 353413,
+   "m4a": {
+    "kb": 129,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 357376
+   },
+   "opus": {
+    "kb": 87,
+    "priming": 312,
+    "rate": 48000,
+    "total": 385920
+   },
+   "sr": 44100,
+   "wav_kb": 1381
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch13.wav": {
+   "ch": 2,
+   "frames": 353091,
+   "m4a": {
+    "kb": 128,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 356352
+   },
+   "opus": {
+    "kb": 136,
+    "priming": 312,
+    "rate": 48000,
+    "total": 384960
+   },
+   "sr": 44100,
+   "wav_kb": 1379
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch14.wav": {
+   "ch": 2,
+   "frames": 357860,
+   "m4a": {
+    "kb": 130,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 361472
+   },
+   "opus": {
+    "kb": 127,
+    "priming": 312,
+    "rate": 48000,
+    "total": 390720
+   },
+   "sr": 44100,
+   "wav_kb": 1398
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch15.wav": {
+   "ch": 2,
+   "frames": 269571,
+   "m4a": {
+    "kb": 99,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 273408
+   },
+   "opus": {
+    "kb": 79,
+    "priming": 312,
+    "rate": 48000,
+    "total": 293760
+   },
+   "sr": 44100,
+   "wav_kb": 1053
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch16.wav": {
+   "ch": 2,
+   "frames": 329225,
+   "m4a": {
+    "kb": 120,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 332800
+   },
+   "opus": {
+    "kb": 110,
+    "priming": 312,
+    "rate": 48000,
+    "total": 359040
+   },
+   "sr": 44100,
+   "wav_kb": 1286
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch17.wav": {
+   "ch": 2,
+   "frames": 102220,
+   "m4a": {
+    "kb": 38,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 105472
+   },
+   "opus": {
+    "kb": 30,
+    "priming": 312,
+    "rate": 48000,
+    "total": 112320
+   },
+   "sr": 44100,
+   "wav_kb": 399
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch18.wav": {
+   "ch": 2,
+   "frames": 164348,
+   "m4a": {
+    "kb": 61,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 167936
+   },
+   "opus": {
+    "kb": 47,
+    "priming": 312,
+    "rate": 48000,
+    "total": 179520
+   },
+   "sr": 44100,
+   "wav_kb": 642
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch19.wav": {
+   "ch": 2,
+   "frames": 354247,
+   "m4a": {
+    "kb": 129,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 357376
+   },
+   "opus": {
+    "kb": 122,
+    "priming": 312,
+    "rate": 48000,
+    "total": 385920
+   },
+   "sr": 44100,
+   "wav_kb": 1384
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch2.wav": {
+   "ch": 2,
+   "frames": 279026,
+   "m4a": {
+    "kb": 102,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 282624
+   },
+   "opus": {
+    "kb": 88,
+    "priming": 312,
+    "rate": 48000,
+    "total": 304320
+   },
+   "sr": 44100,
+   "wav_kb": 1090
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch20.wav": {
+   "ch": 2,
+   "frames": 338633,
+   "m4a": {
+    "kb": 123,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 342016
+   },
+   "opus": {
+    "kb": 121,
+    "priming": 312,
+    "rate": 48000,
+    "total": 369600
+   },
+   "sr": 44100,
+   "wav_kb": 1323
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch21.wav": {
+   "ch": 2,
+   "frames": 112460,
+   "m4a": {
+    "kb": 42,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 115712
+   },
+   "opus": {
+    "kb": 39,
+    "priming": 312,
+    "rate": 48000,
+    "total": 122880
+   },
+   "sr": 44100,
+   "wav_kb": 439
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch22.wav": {
+   "ch": 2,
+   "frames": 359715,
+   "m4a": {
+    "kb": 131,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 363520
+   },
+   "opus": {
+    "kb": 99,
+    "priming": 312,
+    "rate": 48000,
+    "total": 392640
+   },
+   "sr": 44100,
+   "wav_kb": 1405
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch23.wav": {
+   "ch": 2,
+   "frames": 293688,
+   "m4a": {
+    "kb": 107,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 296960
+   },
+   "opus": {
+    "kb": 73,
+    "priming": 312,
+    "rate": 48000,
+    "total": 320640
+   },
+   "sr": 44100,
+   "wav_kb": 1147
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch24.wav": {
+   "ch": 2,
+   "frames": 466326,
+   "m4a": {
+    "kb": 169,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 470016
+   },
+   "opus": {
+    "kb": 129,
+    "priming": 312,
+    "rate": 48000,
+    "total": 508800
+   },
+   "sr": 44100,
+   "wav_kb": 1822
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch25.wav": {
+   "ch": 2,
+   "frames": 346400,
+   "m4a": {
+    "kb": 126,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 350208
+   },
+   "opus": {
+    "kb": 102,
+    "priming": 312,
+    "rate": 48000,
+    "total": 378240
+   },
+   "sr": 44100,
+   "wav_kb": 1353
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch26.wav": {
+   "ch": 2,
+   "frames": 354565,
+   "m4a": {
+    "kb": 129,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 358400
+   },
+   "opus": {
+    "kb": 140,
+    "priming": 312,
+    "rate": 48000,
+    "total": 386880
+   },
+   "sr": 44100,
+   "wav_kb": 1385
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch27.wav": {
+   "ch": 2,
+   "frames": 289883,
+   "m4a": {
+    "kb": 106,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 293888
+   },
+   "opus": {
+    "kb": 125,
+    "priming": 312,
+    "rate": 48000,
+    "total": 315840
+   },
+   "sr": 44100,
+   "wav_kb": 1132
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch28.wav": {
+   "ch": 2,
+   "frames": 363544,
+   "m4a": {
+    "kb": 132,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 367616
+   },
+   "opus": {
+    "kb": 106,
+    "priming": 312,
+    "rate": 48000,
+    "total": 396480
+   },
+   "sr": 44100,
+   "wav_kb": 1420
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch29.wav": {
+   "ch": 2,
+   "frames": 282088,
+   "m4a": {
+    "kb": 103,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 285696
+   },
+   "opus": {
+    "kb": 75,
+    "priming": 312,
+    "rate": 48000,
+    "total": 308160
+   },
+   "sr": 44100,
+   "wav_kb": 1102
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch3.wav": {
+   "ch": 2,
+   "frames": 154729,
+   "m4a": {
+    "kb": 58,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 158720
+   },
+   "opus": {
+    "kb": 47,
+    "priming": 312,
+    "rate": 48000,
+    "total": 168960
+   },
+   "sr": 44100,
+   "wav_kb": 604
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch30.wav": {
+   "ch": 2,
+   "frames": 76979,
+   "m4a": {
+    "kb": 30,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 80896
+   },
+   "opus": {
+    "kb": 34,
+    "priming": 312,
+    "rate": 48000,
+    "total": 84480
+   },
+   "sr": 44100,
+   "wav_kb": 301
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch31.wav": {
+   "ch": 2,
+   "frames": 357478,
+   "m4a": {
+    "kb": 130,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 361472
+   },
+   "opus": {
+    "kb": 106,
+    "priming": 312,
+    "rate": 48000,
+    "total": 389760
+   },
+   "sr": 44100,
+   "wav_kb": 1396
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch32.wav": {
+   "ch": 2,
+   "frames": 114930,
+   "m4a": {
+    "kb": 43,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 118784
+   },
+   "opus": {
+    "kb": 44,
+    "priming": 312,
+    "rate": 48000,
+    "total": 125760
+   },
+   "sr": 44100,
+   "wav_kb": 449
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch33.wav": {
+   "ch": 2,
+   "frames": 353136,
+   "m4a": {
+    "kb": 129,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 356352
+   },
+   "opus": {
+    "kb": 109,
+    "priming": 312,
+    "rate": 48000,
+    "total": 384960
+   },
+   "sr": 44100,
+   "wav_kb": 1379
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch34.wav": {
+   "ch": 2,
+   "frames": 353679,
+   "m4a": {
+    "kb": 129,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 357376
+   },
+   "opus": {
+    "kb": 110,
+    "priming": 312,
+    "rate": 48000,
+    "total": 385920
+   },
+   "sr": 44100,
+   "wav_kb": 1382
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch35.wav": {
+   "ch": 2,
+   "frames": 286239,
+   "m4a": {
+    "kb": 104,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 289792
+   },
+   "opus": {
+    "kb": 135,
+    "priming": 312,
+    "rate": 48000,
+    "total": 312000
+   },
+   "sr": 44100,
+   "wav_kb": 1118
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch36.wav": {
+   "ch": 2,
+   "frames": 110618,
+   "m4a": {
+    "kb": 42,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 114688
+   },
+   "opus": {
+    "kb": 29,
+    "priming": 312,
+    "rate": 48000,
+    "total": 120960
+   },
+   "sr": 44100,
+   "wav_kb": 432
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch4.wav": {
+   "ch": 2,
+   "frames": 359348,
+   "m4a": {
+    "kb": 130,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 362496
+   },
+   "opus": {
+    "kb": 100,
+    "priming": 312,
+    "rate": 48000,
+    "total": 391680
+   },
+   "sr": 44100,
+   "wav_kb": 1404
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch5.wav": {
+   "ch": 2,
+   "frames": 352401,
+   "m4a": {
+    "kb": 129,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 356352
+   },
+   "opus": {
+    "kb": 103,
+    "priming": 312,
+    "rate": 48000,
+    "total": 384000
+   },
+   "sr": 44100,
+   "wav_kb": 1377
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch6.wav": {
+   "ch": 2,
+   "frames": 225524,
+   "m4a": {
+    "kb": 83,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 229376
+   },
+   "opus": {
+    "kb": 69,
+    "priming": 312,
+    "rate": 48000,
+    "total": 246720
+   },
+   "sr": 44100,
+   "wav_kb": 881
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch7.wav": {
+   "ch": 2,
+   "frames": 359936,
+   "m4a": {
+    "kb": 131,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 363520
+   },
+   "opus": {
+    "kb": 114,
+    "priming": 312,
+    "rate": 48000,
+    "total": 392640
+   },
+   "sr": 44100,
+   "wav_kb": 1406
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch8.wav": {
+   "ch": 2,
+   "frames": 341638,
+   "m4a": {
+    "kb": 124,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 345088
+   },
+   "opus": {
+    "kb": 111,
+    "priming": 312,
+    "rate": 48000,
+    "total": 372480
+   },
+   "sr": 44100,
+   "wav_kb": 1335
+  },
+  "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch9.wav": {
+   "ch": 2,
+   "frames": 145422,
+   "m4a": {
+    "kb": 54,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 149504
+   },
+   "opus": {
+    "kb": 42,
+    "priming": 312,
+    "rate": 48000,
+    "total": 159360
+   },
+   "sr": 44100,
+   "wav_kb": 568
+  },
+  "audio/Korg-M1-Drop.wav": {
+   "ch": 2,
+   "frames": 178370,
+   "m4a": {
+    "kb": 66,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 182272
+   },
+   "opus": {
+    "kb": 46,
+    "priming": 312,
+    "rate": 48000,
+    "total": 194880
+   },
+   "sr": 44100,
+   "wav_kb": 697
+  },
+  "audio/Roland-U-220-Unconvincing-Guitar-C4.wav": {
+   "ch": 2,
+   "frames": 173020,
+   "m4a": {
+    "kb": 64,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 176128
+   },
+   "opus": {
+    "kb": 49,
+    "priming": 312,
+    "rate": 48000,
+    "total": 189120
+   },
+   "sr": 44100,
+   "wav_kb": 676
+  },
+  "audio/Water-Drop.wav": {
+   "ch": 2,
+   "frames": 43846,
+   "m4a": {
+    "kb": 18,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 47104
+   },
+   "opus": {
+    "kb": 12,
+    "priming": 312,
+    "rate": 48000,
+    "total": 48960
+   },
+   "sr": 44100,
+   "wav_kb": 171
+  },
+  "audio/bells_chimes/0.wav": {
+   "ch": 2,
+   "frames": 88221,
+   "m4a": {
+    "kb": 34,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 92160
+   },
+   "opus": {
+    "kb": 37,
+    "priming": 312,
+    "rate": 48000,
+    "total": 96960
+   },
+   "sr": 44100,
+   "wav_kb": 345
+  },
+  "audio/bells_chimes/1.wav": {
+   "ch": 2,
+   "frames": 362351,
+   "m4a": {
+    "kb": 132,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 365568
+   },
+   "opus": {
+    "kb": 119,
+    "priming": 312,
+    "rate": 48000,
+    "total": 395520
+   },
+   "sr": 44100,
+   "wav_kb": 1415
+  },
+  "audio/bells_chimes/10.wav": {
+   "ch": 1,
+   "frames": 666208,
+   "m4a": {
+    "kb": 181,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 669696
+   },
+   "opus": {
+    "kb": 163,
+    "priming": 312,
+    "rate": 48000,
+    "total": 725760
+   },
+   "sr": 44100,
+   "wav_kb": 1301
+  },
+  "audio/bells_chimes/11.wav": {
+   "ch": 1,
+   "frames": 505302,
+   "m4a": {
+    "kb": 138,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 508928
+   },
+   "opus": {
+    "kb": 107,
+    "priming": 312,
+    "rate": 48000,
+    "total": 551040
+   },
+   "sr": 44100,
+   "wav_kb": 987
+  },
+  "audio/bells_chimes/12.wav": {
+   "ch": 1,
+   "frames": 971084,
+   "m4a": {
+    "kb": 264,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 974848
+   },
+   "opus": {
+    "kb": 228,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1057920
+   },
+   "sr": 44100,
+   "wav_kb": 1897
+  },
+  "audio/bells_chimes/13.wav": {
+   "ch": 1,
+   "frames": 1355001,
+   "m4a": {
+    "kb": 367,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 1358848
+   },
+   "opus": {
+    "kb": 320,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1475520
+   },
+   "sr": 44100,
+   "wav_kb": 2647
+  },
+  "audio/bells_chimes/14.wav": {
+   "ch": 1,
+   "frames": 2088960,
+   "m4a": {
+    "kb": 565,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 2092032
+   },
+   "opus": {
+    "kb": 413,
+    "priming": 312,
+    "rate": 48000,
+    "total": 2274240
+   },
+   "sr": 44100,
+   "wav_kb": 4080
+  },
+  "audio/bells_chimes/15.wav": {
+   "ch": 1,
+   "frames": 777243,
+   "m4a": {
+    "kb": 211,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 781312
+   },
+   "opus": {
+    "kb": 174,
+    "priming": 312,
+    "rate": 48000,
+    "total": 846720
+   },
+   "sr": 44100,
+   "wav_kb": 1518
+  },
+  "audio/bells_chimes/16.wav": {
+   "ch": 1,
+   "frames": 1334299,
+   "m4a": {
+    "kb": 361,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 1338368
+   },
+   "opus": {
+    "kb": 215,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1453440
+   },
+   "sr": 44100,
+   "wav_kb": 2606
+  },
+  "audio/bells_chimes/17.wav": {
+   "ch": 1,
+   "frames": 1115551,
+   "m4a": {
+    "kb": 302,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 1119232
+   },
+   "opus": {
+    "kb": 165,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1215360
+   },
+   "sr": 44100,
+   "wav_kb": 2179
+  },
+  "audio/bells_chimes/18.wav": {
+   "ch": 1,
+   "frames": 846875,
+   "m4a": {
+    "kb": 230,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 850944
+   },
+   "opus": {
+    "kb": 130,
+    "priming": 312,
+    "rate": 48000,
+    "total": 922560
+   },
+   "sr": 44100,
+   "wav_kb": 1654
+  },
+  "audio/bells_chimes/19.wav": {
+   "ch": 1,
+   "frames": 963725,
+   "m4a": {
+    "kb": 262,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 967680
+   },
+   "opus": {
+    "kb": 151,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1049280
+   },
+   "sr": 44100,
+   "wav_kb": 1882
+  },
+  "audio/bells_chimes/2.wav": {
+   "ch": 2,
+   "frames": 163055,
+   "m4a": {
+    "kb": 60,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 166912
+   },
+   "opus": {
+    "kb": 36,
+    "priming": 312,
+    "rate": 48000,
+    "total": 178560
+   },
+   "sr": 44100,
+   "wav_kb": 637
+  },
+  "audio/bells_chimes/3.wav": {
+   "ch": 2,
+   "frames": 116975,
+   "m4a": {
+    "kb": 44,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 120832
+   },
+   "opus": {
+    "kb": 25,
+    "priming": 312,
+    "rate": 48000,
+    "total": 127680
+   },
+   "sr": 44100,
+   "wav_kb": 457
+  },
+  "audio/bells_chimes/4.wav": {
+   "ch": 2,
+   "frames": 1313903,
+   "m4a": {
+    "kb": 473,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 1317888
+   },
+   "opus": {
+    "kb": 354,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1431360
+   },
+   "sr": 44100,
+   "wav_kb": 5132
+  },
+  "audio/bells_chimes/5.wav": {
+   "ch": 1,
+   "frames": 1130226,
+   "m4a": {
+    "kb": 306,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 1133568
+   },
+   "opus": {
+    "kb": 251,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1230720
+   },
+   "sr": 44100,
+   "wav_kb": 2208
+  },
+  "audio/bells_chimes/6.wav": {
+   "ch": 1,
+   "frames": 685950,
+   "m4a": {
+    "kb": 186,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 689152
+   },
+   "opus": {
+    "kb": 149,
+    "priming": 312,
+    "rate": 48000,
+    "total": 747840
+   },
+   "sr": 44100,
+   "wav_kb": 1340
+  },
+  "audio/bells_chimes/7.wav": {
+   "ch": 1,
+   "frames": 479896,
+   "m4a": {
+    "kb": 131,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 483328
+   },
+   "opus": {
+    "kb": 113,
+    "priming": 312,
+    "rate": 48000,
+    "total": 523200
+   },
+   "sr": 44100,
+   "wav_kb": 937
+  },
+  "audio/bells_chimes/8.wav": {
+   "ch": 1,
+   "frames": 494010,
+   "m4a": {
+    "kb": 135,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 497664
+   },
+   "opus": {
+    "kb": 114,
+    "priming": 312,
+    "rate": 48000,
+    "total": 538560
+   },
+   "sr": 44100,
+   "wav_kb": 965
+  },
+  "audio/bells_chimes/9.wav": {
+   "ch": 1,
+   "frames": 858167,
+   "m4a": {
+    "kb": 233,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 862208
+   },
+   "opus": {
+    "kb": 189,
+    "priming": 312,
+    "rate": 48000,
+    "total": 935040
+   },
+   "sr": 44100,
+   "wav_kb": 1676
+  },
+  "audio/bells_chimes/Casio-MT-600-Synth-Bells-C3.wav": {
+   "ch": 2,
+   "frames": 96355,
+   "m4a": {
+    "kb": 37,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 100352
+   },
+   "opus": {
+    "kb": 40,
+    "priming": 312,
+    "rate": 48000,
+    "total": 105600
+   },
+   "sr": 44100,
+   "wav_kb": 377
+  },
+  "audio/bells_chimes/Ensoniq-ESQ-1-Wave-Bell-C4.wav": {
+   "ch": 2,
+   "frames": 121525,
+   "m4a": {
+    "kb": 45,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 124928
+   },
+   "opus": {
+    "kb": 41,
+    "priming": 312,
+    "rate": 48000,
+    "total": 133440
+   },
+   "sr": 44100,
+   "wav_kb": 475
+  },
+  "audio/bells_chimes/Gong.wav": {
+   "ch": 2,
+   "frames": 187423,
+   "m4a": {
+    "kb": 69,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 191488
+   },
+   "opus": {
+    "kb": 51,
+    "priming": 312,
+    "rate": 48000,
+    "total": 204480
+   },
+   "sr": 44100,
+   "wav_kb": 732
+  },
+  "audio/bells_chimes/bellschimes-plastic-mallet-dinging-steel-tube.wav": {
+   "ch": 2,
+   "frames": 121583,
+   "m4a": {
+    "kb": 45,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 124928
+   },
+   "opus": {
+    "kb": 36,
+    "priming": 312,
+    "rate": 48000,
+    "total": 133440
+   },
+   "sr": 44100,
+   "wav_kb": 475
+  },
+  "audio/ocean_sounds/Digital-Seashore.wav": {
+   "ch": 1,
+   "frames": 666873,
+   "m4a": {
+    "kb": 182,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 670720
+   },
+   "opus": {
+    "kb": 110,
+    "priming": 312,
+    "rate": 48000,
+    "total": 726720
+   },
+   "sr": 44100,
+   "wav_kb": 1303
+  },
+  "audio/ocean_sounds/Flowing-Water.wav": {
+   "ch": 2,
+   "frames": 121985,
+   "m4a": {
+    "kb": 46,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 125952
+   },
+   "opus": {
+    "kb": 27,
+    "priming": 312,
+    "rate": 48000,
+    "total": 133440
+   },
+   "sr": 44100,
+   "wav_kb": 477
+  },
+  "audio/ocean_sounds/Kawai-K11-Seashore.wav": {
+   "ch": 2,
+   "frames": 163676,
+   "m4a": {
+    "kb": 61,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 166912
+   },
+   "opus": {
+    "kb": 38,
+    "priming": 312,
+    "rate": 48000,
+    "total": 178560
+   },
+   "sr": 44100,
+   "wav_kb": 640
+  },
+  "audio/ocean_sounds/Korg-N1R-Seashore.wav": {
+   "ch": 2,
+   "frames": 268728,
+   "m4a": {
+    "kb": 98,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 272384
+   },
+   "opus": {
+    "kb": 57,
+    "priming": 312,
+    "rate": 48000,
+    "total": 293760
+   },
+   "sr": 44100,
+   "wav_kb": 1050
+  },
+  "audio/ocean_sounds/Roland-SC-88-Seashore.wav": {
+   "ch": 2,
+   "frames": 231299,
+   "m4a": {
+    "kb": 85,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 234496
+   },
+   "opus": {
+    "kb": 49,
+    "priming": 312,
+    "rate": 48000,
+    "total": 252480
+   },
+   "sr": 44100,
+   "wav_kb": 904
+  },
+  "audio/ocean_sounds/oceano.wav": {
+   "ch": 1,
+   "frames": 55359,
+   "m4a": {
+    "kb": 22,
+    "priming": 2112,
+    "rate": 11025,
+    "total": 59392
+   },
+   "opus": {
+    "kb": 42,
+    "priming": 312,
+    "rate": 48000,
+    "total": 241920
+   },
+   "sr": 11025,
+   "wav_kb": 54
+  },
+  "audio/ocean_sounds/water-oceans-and-seas-ocean-waves-strong-tide.wav": {
+   "ch": 1,
+   "frames": 5276828,
+   "m4a": {
+    "kb": 1424,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 5280768
+   },
+   "opus": {
+    "kb": 834,
+    "priming": 312,
+    "rate": 48000,
+    "total": 5744640
+   },
+   "sr": 44100,
+   "wav_kb": 10306
+  },
+  "audio/ocean_sounds/water-sounds-ocean-ocean-waves-40.wav": {
+   "ch": 1,
+   "frames": 6375936,
+   "m4a": {
+    "kb": 1720,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 6379520
+   },
+   "opus": {
+    "kb": 1064,
+    "priming": 312,
+    "rate": 48000,
+    "total": 6940800
+   },
+   "sr": 44100,
+   "wav_kb": 12453
+  },
+  "audio/ocean_sounds/water-sounds-ocean-ocean-waves-62.wav": {
+   "ch": 1,
+   "frames": 5693952,
+   "m4a": {
+    "kb": 1536,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 5697536
+   },
+   "opus": {
+    "kb": 893,
+    "priming": 312,
+    "rate": 48000,
+    "total": 6198720
+   },
+   "sr": 44100,
+   "wav_kb": 11121
+  },
+  "audio/ocean_sounds/water-sounds-ocean-ocean-waves-66.wav": {
+   "ch": 1,
+   "frames": 1142272,
+   "m4a": {
+    "kb": 310,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 1145856
+   },
+   "opus": {
+    "kb": 166,
+    "priming": 312,
+    "rate": 48000,
+    "total": 1244160
+   },
+   "sr": 44100,
+   "wav_kb": 2231
+  },
+  "audio/whitenoise/pinknoise.wav": {
+   "ch": 1,
+   "frames": 441001,
+   "m4a": {
+    "kb": 121,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 444416
+   },
+   "opus": {
+    "kb": 72,
+    "priming": 312,
+    "rate": 48000,
+    "total": 480960
+   },
+   "sr": 44100,
+   "wav_kb": 866
+  },
+  "audio/whitenoise/whitenoise.wav": {
+   "ch": 1,
+   "frames": 441001,
+   "m4a": {
+    "kb": 121,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 444416
+   },
+   "opus": {
+    "kb": 72,
+    "priming": 312,
+    "rate": 48000,
+    "total": 480960
+   },
+   "sr": 44100,
+   "wav_kb": 861
+  },
+  "audio/whitenoise/whitenoisegaussian.wav": {
+   "ch": 1,
+   "frames": 441001,
+   "m4a": {
+    "kb": 121,
+    "priming": 2112,
+    "rate": 44100,
+    "total": 444416
+   },
+   "opus": {
+    "kb": 72,
+    "priming": 312,
+    "rate": 48000,
+    "total": 480960
+   },
+   "sr": 44100,
+   "wav_kb": 861
+  }
+ },
+ "version": 1
+}
