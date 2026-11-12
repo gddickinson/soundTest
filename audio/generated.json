@@ -1,0 +1,210 @@
+{
+ "Alesis-Fusion-Acoustic-Bass-C2.wav": {
+  "how": "plucked-string model (Karplus-Strong)",
+  "name": null
+ },
+ "Alesis-Fusion-Sitar-C4.wav": {
+  "how": "plucked string with buzzing bridge",
+  "name": null
+ },
+ "Alesis-S4-Plus-Bari-Sax-C2.wav": {
+  "how": "additive tone with reed formants and breath",
+  "name": null
+ },
+ "Alesis-Sanctuary-QCard-Wind.wav": {
+  "how": "resonant noise bands with slow periodic gusts",
+  "name": "Low wind"
+ },
+ "Bowed-Bass-C2.wav": {
+  "how": "additive tone with body formants and bow noise",
+  "name": null
+ },
+ "Casio-MT-600-Typhoon-Sound.wav": {
+  "how": "gusting noise bands plus synthesised rain patter",
+  "name": "Typhoon"
+ },
+ "Casio-VZ-10M-Astral-C2.wav": {
+  "how": "six detuned additive voices",
+  "name": "Astral pad C2"
+ },
+ "Casio-VZ-10M-Buzzy-Deep-Bass-C1.wav": {
+  "how": "additive saw, saturated",
+  "name": null
+ },
+ "E-Mu-Proteus-2-Flute-C5.wav": {
+  "how": "additive tone with breath noise and vibrato",
+  "name": null
+ },
+ "E-Mu-Proteus-FX-Wacky-Snare.wav": {
+  "how": "noise rattle, falling tone and boing",
+  "name": null
+ },
+ "Ensoniq-ESQ-1-Wind.wav": {
+  "how": "resonant noise bands with slow periodic gusts",
+  "name": "Howling wind"
+ },
+ "Kawai-K5000W-Thunder.wav": {
+  "how": "noise crack and low rolling rumble",
+  "name": "Thunder"
+ },
+ "Korg-M1-Drop.wav": {
+  "how": "falling sine bloop with ping-pong echo",
+  "name": "Synth drop"
+ },
+ "Roland-U-220-Unconvincing-Guitar-C4.wav": {
+  "how": "plucked-string model (Karplus-Strong)",
+  "name": "Guitar C4"
+ },
+ "Water-Drop.wav": {
+  "how": "two synthesised bubbles (rising sine) in a small room",
+  "name": null
+ },
+ "bells_chimes/0.wav": {
+  "how": "tube model struck at A5",
+  "name": null
+ },
+ "bells_chimes/1.wav": {
+  "how": "tube model struck at D5, F#5, A5, D6, B5",
+  "name": null
+ },
+ "bells_chimes/10.wav": {
+  "how": "wind chimes: tube model, major pentatonic on G3",
+  "name": null
+ },
+ "bells_chimes/11.wav": {
+  "how": "wind chimes: glass model, whole tone on D6",
+  "name": null
+ },
+ "bells_chimes/12.wav": {
+  "how": "wind chimes: tube model, sus on G4",
+  "name": null
+ },
+ "bells_chimes/13.wav": {
+  "how": "wind chimes: bowl model, minor pentatonic on A3",
+  "name": null
+ },
+ "bells_chimes/14.wav": {
+  "how": "wind chimes: tube model, major pentatonic on E4",
+  "name": null
+ },
+ "bells_chimes/15.wav": {
+  "how": "wind chimes: bell model, hirajoshi on G4",
+  "name": null
+ },
+ "bells_chimes/16.wav": {
+  "how": "wind chimes: tube model, lydian on E5",
+  "name": null
+ },
+ "bells_chimes/17.wav": {
+  "how": "wind chimes: tube model, minor pentatonic on C4",
+  "name": null
+ },
+ "bells_chimes/18.wav": {
+  "how": "wind chimes: glass model, major pentatonic on G5",
+  "name": null
+ },
+ "bells_chimes/19.wav": {
+  "how": "wind chimes: bell model, sus on D4",
+  "name": null
+ },
+ "bells_chimes/2.wav": {
+  "how": "glass model struck at G5, D6",
+  "name": null
+ },
+ "bells_chimes/3.wav": {
+  "how": "tube model struck at G4",
+  "name": null
+ },
+ "bells_chimes/4.wav": {
+  "how": "wind chimes: tube model, major pentatonic on C5",
+  "name": null
+ },
+ "bells_chimes/5.wav": {
+  "how": "wind chimes: bowl model, sus on C4",
+  "name": null
+ },
+ "bells_chimes/6.wav": {
+  "how": "wind chimes: glass model, major pentatonic on C6",
+  "name": null
+ },
+ "bells_chimes/7.wav": {
+  "how": "wind chimes: tube model, minor pentatonic on A4",
+  "name": null
+ },
+ "bells_chimes/8.wav": {
+  "how": "wind chimes: bell model, lydian on C4",
+  "name": null
+ },
+ "bells_chimes/9.wav": {
+  "how": "wind chimes: tube model, hirajoshi on D5",
+  "name": null
+ },
+ "bells_chimes/Casio-MT-600-Synth-Bells-C3.wav": {
+  "how": "FM synthesis",
+  "name": null
+ },
+ "bells_chimes/Ensoniq-ESQ-1-Wave-Bell-C4.wav": {
+  "how": "bell model struck at C4",
+  "name": null
+ },
+ "bells_chimes/Gong.wav": {
+  "how": "48 inharmonic partials with bloom",
+  "name": null
+ },
+ "bells_chimes/bellschimes-plastic-mallet-dinging-steel-tube.wav": {
+  "how": "tube model struck at C6",
+  "name": null
+ },
+ "ocean_sounds/Digital-Seashore.wav": {
+  "how": "filtered-noise swell with a resonant band",
+  "name": null
+ },
+ "ocean_sounds/Flowing-Water.wav": {
+  "how": "hundreds of synthesised bubbles over filtered noise",
+  "name": null
+ },
+ "ocean_sounds/Kawai-K11-Seashore.wav": {
+  "how": "filtered-noise swell",
+  "name": "Seashore (bright swell)"
+ },
+ "ocean_sounds/Korg-N1R-Seashore.wav": {
+  "how": "filtered-noise swell with a resonant band",
+  "name": "Seashore (resonant)"
+ },
+ "ocean_sounds/Roland-SC-88-Seashore.wav": {
+  "how": "filtered-noise swell",
+  "name": "Seashore (crashing)"
+ },
+ "ocean_sounds/oceano.wav": {
+  "how": "filtered-noise swell",
+  "name": null
+ },
+ "ocean_sounds/water-oceans-and-seas-ocean-waves-strong-tide.wav": {
+  "how": "filtered noise swelling in waves every ~7 s, with crash and foam layers",
+  "name": null
+ },
+ "ocean_sounds/water-sounds-ocean-ocean-waves-40.wav": {
+  "how": "filtered noise swelling in waves every ~10 s, with crash and foam layers",
+  "name": null
+ },
+ "ocean_sounds/water-sounds-ocean-ocean-waves-62.wav": {
+  "how": "filtered noise swelling in waves every ~12 s, with crash and foam layers",
+  "name": null
+ },
+ "ocean_sounds/water-sounds-ocean-ocean-waves-66.wav": {
+  "how": "filtered noise swelling in waves every ~8.5 s, with crash and foam layers",
+  "name": null
+ },
+ "whitenoise/pinknoise.wav": {
+  "how": "noise shaped to 1/f in the frequency domain",
+  "name": null
+ },
+ "whitenoise/whitenoise.wav": {
+  "how": "uniform random samples",
+  "name": null
+ },
+ "whitenoise/whitenoisegaussian.wav": {
+  "how": "Gaussian random samples",
+  "name": null
+ }
+}
