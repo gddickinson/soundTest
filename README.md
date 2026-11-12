@@ -37,6 +37,25 @@ the original page: [classic/](https://gddickinson.github.io/soundTest/classic/)
   `audio/manifest.json`, so loops stay seamless.
 - **Keyboard control**: press `?` on any page for the list.
 
+## The sounds
+
+The 36 sci-fi glitches are the Korg DS-8 Sci-Fi Sound Effects Pack (royalty-free). The other 52 sounds are original,
+synthesised from scratch by `scripts/synth_sounds.py` (seeded numpy, so it reproduces the committed files exactly) with
+the names, lengths, sample rates and channel counts of the recordings they replaced, so presets and links still work:
+
+- **Noise**: uniform and Gaussian white noise; pink noise shaped to 1/f in the frequency domain.
+- **Ocean & water**: noise filtered and swelling in waves (roar, crash and foam layers); synth seashores; flowing water from
+  hundreds of synthesised bubbles; a water drop (rising-pitch bubble).
+- **Wind & weather**: resonant noise bands with slow gusts (two winds); typhoon (gusts plus synthesised rain); thunder
+  (crack and rolling rumble).
+- **Bells & chimes**: struck tube, church-bell, singing-bowl and glass models (inharmonic partials) playing wind-chime
+  sequences in different scales; an FM bell; a gong with 48 blooming partials.
+- **Instruments**: plucked strings (Karplus-Strong bass and guitar, sitar with a buzzing bridge), additive flute, bowed
+  bass, baritone sax, saw bass and a detuned pad, a snare and a synth drop.
+
+Loops are seamless by construction (whole-period noise and modulation, events wrapped around the loop point); one-shots
+start and end in silence. Loudness matches the replaced files (RMS, clamped to −30…−12 dBFS), peaks stay below −1 dBFS.
+
 ## How to use
 
 Open the **Mixer**, press `+` next to a sound (or ▶ to preview it once), or start from a **Preset**. Each layer gets a
@@ -85,6 +104,7 @@ fetches from `file://`.
 node --test tests/                 # mix links, sleep fade, seamless loops, scatter, sound catalogue, classic page
 python -m pytest -q tests/         # Playwright smoke test (needs pytest + playwright, and Chrome or Playwright's Chromium)
 node scripts/make_catalog.mjs      # regenerate static/catalog_data.js after adding/removing WAVs
+python scripts/synth_sounds.py     # regenerate the 52 original sounds (numpy; --check compares with the WAVs)
 python3 scripts/compress_audio.py  # (re)make the .opus/.m4a copies and audio/manifest.json (needs ffmpeg with libopus)
 python scripts/screenshots.py --phone   # refresh docs/img/
 ```
@@ -103,8 +123,9 @@ soundTest/
 ├── index.html            # the mixer site (hash router: #/, #/mixer, #/visualiser, #/presets, #/credits, #/about)
 ├── static/               # ES modules + styles (see INTERFACE.md for a file-by-file map)
 ├── classic/              # the original page (index.html, script.js, style.css), bugs fixed
-├── audio/                # the 88 WAV samples (masters) + .opus/.m4a copies + manifest.json (third-party, see below)
-├── scripts/              # make_catalog.mjs (sound list), compress_audio.py (Opus/AAC copies), screenshots.py
+├── audio/                # 88 WAVs (masters) + .opus/.m4a copies + manifest.json + generated.json
+├── scripts/              # synth_sounds.py + synth/ (the 52 original sounds), make_catalog.mjs, compress_audio.py,
+│                         # screenshots.py
 ├── tests/                # node tests (*.test.mjs) and the Playwright smoke test (test_smoke.py)
 └── docs/img/             # screenshots
 ```
@@ -136,8 +157,9 @@ Contributions to SoundTest are welcome! Feel free to submit pull requests or ope
 
 ## License
 
-Released under the [MIT licence](LICENSE). The sound samples in `audio/` (and their compressed copies) are third-party: see
-[THIRD_PARTY.md](THIRD_PARTY.md) and the site's Credits page.
+Released under the [MIT licence](LICENSE). 52 of the 88 sounds are original (synthesised by `scripts/synth_sounds.py`)
+and under the same MIT licence; the 36 Korg DS-8 glitches are third-party, royalty-free: see [THIRD_PARTY.md](THIRD_PARTY.md)
+and the site's Credits page.
 
 ## Credits
 

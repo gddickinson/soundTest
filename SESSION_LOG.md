@@ -29,3 +29,11 @@
   and 48 kHz. The raw-priming case was checked offline (ffmpeg -ignore_editlist + manifest priming: lag 0). Playwright
   WebKit is not installed here, so the WebKit test skips.
 - Tests: node 24 pass; Playwright 11 pass, 1 skipped (WebKit).
+
+## 2026-11-12 — original sounds replace the 52 unlicensed WAVs (George asked)
+- `scripts/synth_sounds.py` + `scripts/synth/` (numpy, seeded per file): same file names, frames, rates, channels;
+  RMS matched to the old files (clamped -30..-12 dBFS), peaks <= -1 dBFS; loops periodic by construction, one-shots
+  start/end at 0. Checked numerically: spectral centroid close to the old files for most, pitch of the C-note
+  instruments (HPS), no clipping, seam step <= normal step. Display names/sources updated via `audio/generated.json`.
+- Regenerated Opus/AAC + manifest (Opus library 11.5 MB). THIRD_PARTY.md and credits: 52 original (MIT), 36 Korg.
+- Old recordings remain in git history; removing them needs a history rewrite + force-push (George's decision).

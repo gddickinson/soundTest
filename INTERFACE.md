@@ -51,10 +51,13 @@ changes.
 | Path | Contents |
 |---|---|
 | `classic/` | The original page (`index.html`, `script.js`, `style.css`), audio paths `../audio/` |
-| `audio/` | 88 WAVs (masters) + `.opus`/`.m4a` copies + `manifest.json` (lengths, priming) + Korg `Readme.txt` (third-party; see THIRD_PARTY.md) |
+| `audio/` | 88 WAVs (52 original + 36 Korg; masters) + `.opus`/`.m4a` copies + `manifest.json` (lengths, priming) + Korg `Readme.txt` (third-party; see THIRD_PARTY.md) |
+| `scripts/synth_sounds.py` | Generates the 52 original WAVs + `audio/generated.json` (`render`, `metrics`, `--check`) |
+| `scripts/synth/` | `dsp.py` (noise, filters, envelopes, circular rendering, reverb), `recipes_nature.py`, `recipes_tonal.py`, `spec.py` (the 52 sounds: length, rate, channels, loudness, recipe; `NAMES`, `HOW`) |
 | `scripts/compress_audio.py` | Makes the Opus/AAC copies with ffmpeg and writes `audio/manifest.json` |
 | `scripts/make_catalog.mjs` | Builds `static/catalog_data.js` (`--check` to verify); exports `wavInfo`, `buildCatalog`, `render` |
 | `scripts/screenshots.py` | README screenshots into `docs/img/` |
 | `tests/*.test.mjs` | node tests: `mix_logic`, `catalog`, `codec_trim`, `legacy_player` (classic page with a fake DOM) |
 | `tests/align_check.js` | Browser-side check used by the smoke test: compressed copies vs WAV (length, lag, correlation) |
+| `tests/test_synth.py` | Generated sounds: reproducible, seamless, unclipped, lengths/ids unchanged, generated.json current |
 | `tests/test_smoke.py` | Playwright smoke test against `python -m http.server` |

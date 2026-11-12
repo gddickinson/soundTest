@@ -8,7 +8,7 @@ route('about', () => {
   app().innerHTML = `
     <p class="kicker">About</p><h1 class="glow">soundTest</h1>
     <p class="lead">“Sleeping loops and more”: a browser sound mixer for relaxation, focus and sleep, built on the
-      ${T.sounds} WAV samples (${Math.round(T.mb)} MB) in this repository, by G.D. Dickinson.</p>
+      ${T.sounds} sounds in this repository (52 synthesised for it, 36 from the Korg DS-8 pack), by G.D. Dickinson.</p>
     <div class="two">
       <div class="panel"><h3>How it works</h3><ul>
         <li>Everything runs in your browser with the Web Audio API; there is no server beyond static files.</li>
