@@ -10,7 +10,7 @@
     "total": 131072
    },
    "opus": {
-    "kb": 36,
+    "kb": 37,
     "priming": 312,
     "rate": 48000,
     "total": 140160
@@ -28,7 +28,7 @@
     "total": 110592
    },
    "opus": {
-    "kb": 43,
+    "kb": 40,
     "priming": 312,
     "rate": 48000,
     "total": 117120
@@ -46,7 +46,7 @@
     "total": 84992
    },
    "opus": {
-    "kb": 28,
+    "kb": 19,
     "priming": 312,
     "rate": 48000,
     "total": 90240
@@ -64,7 +64,7 @@
     "total": 505856
    },
    "opus": {
-    "kb": 130,
+    "kb": 112,
     "priming": 312,
     "rate": 48000,
     "total": 548160
@@ -82,7 +82,7 @@
     "total": 151552
    },
    "opus": {
-    "kb": 48,
+    "kb": 36,
     "priming": 312,
     "rate": 48000,
     "total": 162240
@@ -100,13 +100,13 @@
     "total": 172032
    },
    "opus": {
-    "kb": 38,
+    "kb": 43,
     "priming": 312,
     "rate": 48000,
     "total": 183360
    },
    "sr": 44100,
-   "wav_kb": 657
+   "wav_kb": 656
   },
   "audio/Casio-VZ-10M-Astral-C2.wav": {
    "ch": 2,
@@ -118,7 +118,7 @@
     "total": 287744
    },
    "opus": {
-    "kb": 57,
+    "kb": 72,
     "priming": 312,
     "rate": 48000,
     "total": 310080
@@ -136,7 +136,7 @@
     "total": 100352
    },
    "opus": {
-    "kb": 24,
+    "kb": 22,
     "priming": 312,
     "rate": 48000,
     "total": 105600
@@ -172,7 +172,7 @@
     "total": 21504
    },
    "opus": {
-    "kb": 5,
+    "kb": 4,
     "priming": 312,
     "rate": 48000,
     "total": 20160
@@ -190,7 +190,7 @@
     "total": 944128
    },
    "opus": {
-    "kb": 250,
+    "kb": 223,
     "priming": 312,
     "rate": 48000,
     "total": 1024320
@@ -208,7 +208,7 @@
     "total": 151552
    },
    "opus": {
-    "kb": 34,
+    "kb": 31,
     "priming": 312,
     "rate": 48000,
     "total": 162240
@@ -874,7 +874,7 @@
     "total": 182272
    },
    "opus": {
-    "kb": 46,
+    "kb": 66,
     "priming": 312,
     "rate": 48000,
     "total": 194880
@@ -892,7 +892,7 @@
     "total": 176128
    },
    "opus": {
-    "kb": 49,
+    "kb": 60,
     "priming": 312,
     "rate": 48000,
     "total": 189120
@@ -910,7 +910,7 @@
     "total": 47104
    },
    "opus": {
-    "kb": 12,
+    "kb": 11,
     "priming": 312,
     "rate": 48000,
     "total": 48960
@@ -928,7 +928,7 @@
     "total": 92160
    },
    "opus": {
-    "kb": 37,
+    "kb": 39,
     "priming": 312,
     "rate": 48000,
     "total": 96960
@@ -946,7 +946,7 @@
     "total": 365568
    },
    "opus": {
-    "kb": 119,
+    "kb": 164,
     "priming": 312,
     "rate": 48000,
     "total": 395520
@@ -964,7 +964,7 @@
     "total": 669696
    },
    "opus": {
-    "kb": 163,
+    "kb": 148,
     "priming": 312,
     "rate": 48000,
     "total": 725760
@@ -982,7 +982,7 @@
     "total": 508928
    },
    "opus": {
-    "kb": 107,
+    "kb": 152,
     "priming": 312,
     "rate": 48000,
     "total": 551040
@@ -1000,7 +1000,7 @@
     "total": 974848
    },
    "opus": {
-    "kb": 228,
+    "kb": 191,
     "priming": 312,
     "rate": 48000,
     "total": 1057920
@@ -1018,7 +1018,7 @@
     "total": 1358848
    },
    "opus": {
-    "kb": 320,
+    "kb": 339,
     "priming": 312,
     "rate": 48000,
     "total": 1475520
@@ -1036,7 +1036,7 @@
     "total": 2092032
    },
    "opus": {
-    "kb": 413,
+    "kb": 537,
     "priming": 312,
     "rate": 48000,
     "total": 2274240
@@ -1054,7 +1054,7 @@
     "total": 781312
    },
    "opus": {
-    "kb": 174,
+    "kb": 180,
     "priming": 312,
     "rate": 48000,
     "total": 846720
@@ -1072,7 +1072,7 @@
     "total": 1338368
    },
    "opus": {
-    "kb": 215,
+    "kb": 301,
     "priming": 312,
     "rate": 48000,
     "total": 1453440
@@ -1090,7 +1090,7 @@
     "total": 1119232
    },
    "opus": {
-    "kb": 165,
+    "kb": 250,
     "priming": 312,
     "rate": 48000,
     "total": 1215360
@@ -1108,7 +1108,7 @@
     "total": 850944
    },
    "opus": {
-    "kb": 130,
+    "kb": 234,
     "priming": 312,
     "rate": 48000,
     "total": 922560
@@ -1126,7 +1126,7 @@
     "total": 967680
    },
    "opus": {
-    "kb": 151,
+    "kb": 227,
     "priming": 312,
     "rate": 48000,
     "total": 1049280
@@ -1144,7 +1144,7 @@
     "total": 166912
    },
    "opus": {
-    "kb": 36,
+    "kb": 73,
     "priming": 312,
     "rate": 48000,
     "total": 178560
@@ -1162,7 +1162,7 @@
     "total": 120832
    },
    "opus": {
-    "kb": 25,
+    "kb": 43,
     "priming": 312,
     "rate": 48000,
     "total": 127680
@@ -1180,7 +1180,7 @@
     "total": 1317888
    },
    "opus": {
-    "kb": 354,
+    "kb": 571,
     "priming": 312,
     "rate": 48000,
     "total": 1431360
@@ -1198,7 +1198,7 @@
     "total": 1133568
    },
    "opus": {
-    "kb": 251,
+    "kb": 246,
     "priming": 312,
     "rate": 48000,
     "total": 1230720
@@ -1216,7 +1216,7 @@
     "total": 689152
    },
    "opus": {
-    "kb": 149,
+    "kb": 205,
     "priming": 312,
     "rate": 48000,
     "total": 747840
@@ -1234,7 +1234,7 @@
     "total": 483328
    },
    "opus": {
-    "kb": 113,
+    "kb": 139,
     "priming": 312,
     "rate": 48000,
     "total": 523200
@@ -1252,7 +1252,7 @@
     "total": 497664
    },
    "opus": {
-    "kb": 114,
+    "kb": 106,
     "priming": 312,
     "rate": 48000,
     "total": 538560
@@ -1270,7 +1270,7 @@
     "total": 862208
    },
    "opus": {
-    "kb": 189,
+    "kb": 250,
     "priming": 312,
     "rate": 48000,
     "total": 935040
@@ -1288,13 +1288,13 @@
     "total": 100352
    },
    "opus": {
-    "kb": 40,
+    "kb": 32,
     "priming": 312,
     "rate": 48000,
     "total": 105600
    },
    "sr": 44100,
-   "wav_kb": 377
+   "wav_kb": 376
   },
   "audio/bells_chimes/Ensoniq-ESQ-1-Wave-Bell-C4.wav": {
    "ch": 2,
@@ -1306,7 +1306,7 @@
     "total": 124928
    },
    "opus": {
-    "kb": 41,
+    "kb": 33,
     "priming": 312,
     "rate": 48000,
     "total": 133440
@@ -1324,7 +1324,7 @@
     "total": 191488
    },
    "opus": {
-    "kb": 51,
+    "kb": 59,
     "priming": 312,
     "rate": 48000,
     "total": 204480
@@ -1342,7 +1342,7 @@
     "total": 124928
    },
    "opus": {
-    "kb": 36,
+    "kb": 48,
     "priming": 312,
     "rate": 48000,
     "total": 133440
@@ -1360,7 +1360,7 @@
     "total": 670720
    },
    "opus": {
-    "kb": 110,
+    "kb": 106,
     "priming": 312,
     "rate": 48000,
     "total": 726720
@@ -1378,7 +1378,7 @@
     "total": 125952
    },
    "opus": {
-    "kb": 27,
+    "kb": 30,
     "priming": 312,
     "rate": 48000,
     "total": 133440
@@ -1390,19 +1390,19 @@
    "ch": 2,
    "frames": 163676,
    "m4a": {
-    "kb": 61,
+    "kb": 60,
     "priming": 2112,
     "rate": 44100,
     "total": 166912
    },
    "opus": {
-    "kb": 38,
+    "kb": 39,
     "priming": 312,
     "rate": 48000,
     "total": 178560
    },
    "sr": 44100,
-   "wav_kb": 640
+   "wav_kb": 639
   },
   "audio/ocean_sounds/Korg-N1R-Seashore.wav": {
    "ch": 2,
@@ -1414,7 +1414,7 @@
     "total": 272384
    },
    "opus": {
-    "kb": 57,
+    "kb": 64,
     "priming": 312,
     "rate": 48000,
     "total": 293760
@@ -1432,7 +1432,7 @@
     "total": 234496
    },
    "opus": {
-    "kb": 49,
+    "kb": 54,
     "priming": 312,
     "rate": 48000,
     "total": 252480
@@ -1450,13 +1450,13 @@
     "total": 59392
    },
    "opus": {
-    "kb": 42,
+    "kb": 39,
     "priming": 312,
     "rate": 48000,
     "total": 241920
    },
    "sr": 11025,
-   "wav_kb": 54
+   "wav_kb": 108
   },
   "audio/ocean_sounds/water-oceans-and-seas-ocean-waves-strong-tide.wav": {
    "ch": 1,
@@ -1468,7 +1468,7 @@
     "total": 5280768
    },
    "opus": {
-    "kb": 834,
+    "kb": 795,
     "priming": 312,
     "rate": 48000,
     "total": 5744640
@@ -1486,7 +1486,7 @@
     "total": 6379520
    },
    "opus": {
-    "kb": 1064,
+    "kb": 956,
     "priming": 312,
     "rate": 48000,
     "total": 6940800
@@ -1504,7 +1504,7 @@
     "total": 5697536
    },
    "opus": {
-    "kb": 893,
+    "kb": 861,
     "priming": 312,
     "rate": 48000,
     "total": 6198720
@@ -1522,7 +1522,7 @@
     "total": 1145856
    },
    "opus": {
-    "kb": 166,
+    "kb": 172,
     "priming": 312,
     "rate": 48000,
     "total": 1244160
@@ -1546,7 +1546,7 @@
     "total": 480960
    },
    "sr": 44100,
-   "wav_kb": 866
+   "wav_kb": 861
   },
   "audio/whitenoise/whitenoise.wav": {
    "ch": 1,
@@ -1558,7 +1558,7 @@
     "total": 444416
    },
    "opus": {
-    "kb": 72,
+    "kb": 73,
     "priming": 312,
     "rate": 48000,
     "total": 480960
@@ -1576,7 +1576,7 @@
     "total": 444416
    },
    "opus": {
-    "kb": 72,
+    "kb": 73,
     "priming": 312,
     "rate": 48000,
     "total": 480960
