@@ -37,3 +37,8 @@
   instruments (HPS), no clipping, seam step <= normal step. Display names/sources updated via `audio/generated.json`.
 - Regenerated Opus/AAC + manifest (Opus library 11.5 MB). THIRD_PARTY.md and credits: 52 original (MIT), 36 Korg.
 - Old recordings remain in git history; removing them needs a history rewrite + force-push (George's decision).
+
+## 2026-11-12: git history rewrite (approved by George)
+- Purged from all history with git-filter-repo and force-pushed: the 52 replaced recordings (old WAV blobs plus the Opus/AAC copies made from them, 156 blobs; the current files and the Korg DS-8 pack are untouched).
+  The current tree is unchanged (identical HEAD tree before/after); commit hashes changed, so old clones must be
+  re-cloned or reset to origin. A pre-rewrite mirror backup was kept outside the repo.
