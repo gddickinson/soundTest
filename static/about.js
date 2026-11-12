@@ -12,7 +12,9 @@ route('about', () => {
     <div class="two">
       <div class="panel"><h3>How it works</h3><ul>
         <li>Everything runs in your browser with the Web Audio API; there is no server beyond static files.</li>
-        <li>WAVs are downloaded only when a sound is used, with progress shown; each is decoded once and cached.</li>
+        <li>A sound is downloaded only when it is used, with progress shown, as Opus (or AAC on browsers without Opus, else
+          the WAV): about 11 MB for the whole library instead of 128 MB. The decoded audio is cut back to the WAV's exact
+          start and length (the encoders add a little silence), so loops stay seamless.</li>
         <li><b>Loop</b> layers fold the last 1.5 s of the sound over its start with an equal-power crossfade, then play
           with <code>AudioBufferSourceNode.loop</code>, so the loop point is sample-accurate and has no click.</li>
         <li><b>Scatter</b> layers decide every N seconds (±25 %) whether to play, with a chance you set; one-shots are scheduled

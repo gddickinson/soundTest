@@ -1,6 +1,6 @@
 // The sound library on the mixer page: search, category chips, preview and add buttons, per-file load progress.
 import { esc, list } from './core.js';
-import { CATEGORIES, CAT, SOUNDS, search, fmtDur, fmtSize } from './catalog.js';
+import { CATEGORIES, CAT, SOUNDS, search, fmtDur } from './catalog.js';
 import { engine } from './audio_engine.js';
 import { loadState } from './loader.js';
 
@@ -25,7 +25,7 @@ export function mountLibrary(host, { cat = '', q = '' } = {}) {
     return `<li class="lib-row ${inMix ? 'in' : ''}" data-id="${s.id}" style="--c:${CAT[s.cat].hue}">
       <button class="icon alt" data-act="preview" aria-label="${prev ? 'Stop preview of' : 'Preview'} ${esc(s.name)}" title="Preview">${prev ? '&#9632;' : '&#9654;'}</button>
       <span class="lib-name"><b>${esc(s.name)}</b><small>${esc([s.source, CAT[s.cat].label].filter(Boolean).join(' · '))}</small></span>
-      <span class="lib-meta mono small">${fmtDur(s.dur)}<br>${pct === null ? fmtSize(s.kb) : pct + ' %'}</span>
+      <span class="lib-meta mono small">${fmtDur(s.dur)}<br>${pct === null ? (s.ch === 1 ? 'mono' : 'stereo') : pct + ' %'}</span>
       <button class="icon" data-act="add" ${inMix ? 'disabled' : ''} aria-label="${inMix ? esc(s.name) + ' is in the mix' : 'Add ' + esc(s.name) + ' to the mix'}"
         title="${inMix ? 'In the mix' : 'Add to the mix'}">${inMix ? '&#10003;' : '+'}</button>
       ${pct === null ? '' : `<i class="lib-prog" style="width:${pct}%"></i>`}</li>`;

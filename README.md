@@ -30,7 +30,11 @@ the original page: [classic/](https://gddickinson.github.io/soundTest/classic/)
   address bar always holds a link that rebuilds the current mix exactly.
 - **Live visualiser**: spectrum (log-frequency bars with peak caps), waveform and orbit views of the master output,
   on the mixer page and full screen.
-- **Lazy loading**: a WAV is downloaded only when it is used, with progress per file and in the player bar.
+- **Small, lazy downloads**: a sound is downloaded only when it is used, with progress per file and in the player bar,
+  as Opus (Chrome, Firefox, Edge, recent Safari), else AAC (`.m4a`), else the original WAV. Loading every sound costs
+  10.8 MB as Opus or 15.0 MB as AAC instead of 127.9 MB of WAV. Encoders add a little silence at the start (priming)
+  and end (padding); the player cuts the decoded audio back to the WAV's exact first sample and length using
+  `audio/manifest.json`, so loops stay seamless.
 - **Keyboard control**: press `?` on any page for the list.
 
 ## How to use
@@ -81,12 +85,16 @@ fetches from `file://`.
 node --test tests/                 # mix links, sleep fade, seamless loops, scatter, sound catalogue, classic page
 python -m pytest -q tests/         # Playwright smoke test (needs pytest + playwright, and Chrome or Playwright's Chromium)
 node scripts/make_catalog.mjs      # regenerate static/catalog_data.js after adding/removing WAVs
+python3 scripts/compress_audio.py  # (re)make the .opus/.m4a copies and audio/manifest.json (needs ffmpeg with libopus)
 python scripts/screenshots.py --phone   # refresh docs/img/
 ```
 
 The smoke test serves the repository with `python -m http.server`, opens every page (no console errors, no horizontal
 scroll at 390 px), plays a preset and checks that sound comes out and the loops are crossfaded, rebuilds a mix from a
 share link, drives mute/solo/volume from the keyboard, runs a 4-second sleep timer, and clicks through the classic page.
+It also decodes a few sounds as WAV, Opus and AAC (at 44.1 and 48 kHz) with the site's loader and checks the copies have
+the WAV's exact length and line up with it at the first and last samples (Chrome; WebKit too when Playwright's WebKit is
+installed).
 
 ## Project structure
 
@@ -95,8 +103,8 @@ soundTest/
 ├── index.html            # the mixer site (hash router: #/, #/mixer, #/visualiser, #/presets, #/credits, #/about)
 ├── static/               # ES modules + styles (see INTERFACE.md for a file-by-file map)
 ├── classic/              # the original page (index.html, script.js, style.css), bugs fixed
-├── audio/                # the 88 WAV samples (third-party, see below)
-├── scripts/              # make_catalog.mjs (sound list from WAV headers), screenshots.py
+├── audio/                # the 88 WAV samples (masters) + .opus/.m4a copies + manifest.json (third-party, see below)
+├── scripts/              # make_catalog.mjs (sound list), compress_audio.py (Opus/AAC copies), screenshots.py
 ├── tests/                # node tests (*.test.mjs) and the Playwright smoke test (test_smoke.py)
 └── docs/img/             # screenshots
 ```
@@ -120,8 +128,6 @@ Any current browser with the Web Audio API and ES modules (Chrome, Edge, Firefox
 
 ## Ideas
 
-- Serving compressed copies of the WAVs (Opus or AAC/MP3) would cut downloads roughly tenfold; not done, as it adds
-  files and changes the audio (needs a decision).
 - More visualiser styles; per-layer EQ.
 
 ## Contributing
@@ -130,8 +136,8 @@ Contributions to SoundTest are welcome! Feel free to submit pull requests or ope
 
 ## License
 
-Released under the [MIT licence](LICENSE). The sound samples in `audio/` are third-party: see [THIRD_PARTY.md](THIRD_PARTY.md)
-and the site's Credits page.
+Released under the [MIT licence](LICENSE). The sound samples in `audio/` (and their compressed copies) are third-party: see
+[THIRD_PARTY.md](THIRD_PARTY.md) and the site's Credits page.
 
 ## Credits
 

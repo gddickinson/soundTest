@@ -18,3 +18,14 @@
 - Tests: node 19 pass; Playwright smoke 9 pass (smoke server uses a longer listen queue: the default 5 dropped
   module requests on macOS and made first loads stall).
 - No audio added or converted. Suggestion for George: compressed copies (Opus/AAC) would cut downloads ~10x.
+
+## 2026-11-11 — compressed copies (George approved)
+- `scripts/compress_audio.py` (ffmpeg): Opus 96/64 kb/s and AAC (AudioToolbox) 128/96 kb/s next to each WAV, plus
+  `audio/manifest.json` (WAV frames/rate; per format codec rate, priming (Opus pre-skip 312, AAC 2112), raw length).
+- Player loads Opus > AAC > WAV (canPlayType, falling back on decode errors) and trims the decoded buffer to the WAV's
+  exact start/length (`static/codec_trim.js`), then builds the seamless loop as before.
+- Full library download: WAV 127.9 MB -> Opus 10.8 MB (AAC 15.0 MB). Repo grows by ~26 MB.
+- Chrome decodes both formats already trimmed ("exact" case); lengths equal and lag 0 at first/last samples at 44.1
+  and 48 kHz. The raw-priming case was checked offline (ffmpeg -ignore_editlist + manifest priming: lag 0). Playwright
+  WebKit is not installed here, so the WebKit test skips.
+- Tests: node 24 pass; Playwright 11 pass, 1 skipped (WebKit).

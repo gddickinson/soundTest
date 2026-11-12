@@ -23,12 +23,13 @@ changes.
 | `static/loop_xfade.js` | `makeSeamless(channels, sr, fadeSec)`, `fadeSamples` |
 | `static/scatter.js` | `planHits(next, until, every, chance, rand)`, `hitsPerMinute` |
 | `static/presets.js` | `PRESETS`, `preset(key)` |
+| `static/codec_trim.js` | `FORMATS`, `formatOrder(canPlay)`, `fileFor`, `trimPlan(decodedLen, rate, entry, fmt)`, `trimChannels`, `libraryKB` |
 
 ## Audio and browser services
 | File | Contents |
 |---|---|
 | `static/audio_engine.js` | `engine` (EventTarget: `change`, `state`, `timer`, `preview`): graph, layers, `play/pause/toggle`, `add/remove/set/applyMix/clear`, `previewSound`, `startTimer/cancelTimer`, `level` |
-| `static/loader.js` | `loadBuffer(ctx, url, sizeHint)` streaming fetch + decode cache, `loadState`, `pendingTotals`, `loader` progress events |
+| `static/loader.js` | `loadSound(ctx, sound)` best format (Opus > AAC > WAV) + streaming fetch + decode + trim, cached; `decodeAs(ctx, wav, fmt)`, `manifest()`, `formats()`, `loadState`, `pendingTotals`, `loader` progress events |
 | `static/store.js` | localStorage (try/catch): `savedMixes`, `saveMix`, `deleteMix`, `lastMix`, `rememberMix`, `prefs`, `setPref` |
 | `static/share.js` | `mixHash`, `shareUrl`, `syncHash` (replaceState), `copyText` |
 | `static/visualiser.js` | `makeVisualiser(canvas, getAnalyser).draw(mode, t, live)`, `MODES` (spectrum, scope, orbit) |
@@ -50,8 +51,10 @@ changes.
 | Path | Contents |
 |---|---|
 | `classic/` | The original page (`index.html`, `script.js`, `style.css`), audio paths `../audio/` |
-| `audio/` | 88 WAVs + `Korg-DS-8-Sci-Fi-Sound-Effects-Pack/Readme.txt` (third-party; see THIRD_PARTY.md) |
+| `audio/` | 88 WAVs (masters) + `.opus`/`.m4a` copies + `manifest.json` (lengths, priming) + Korg `Readme.txt` (third-party; see THIRD_PARTY.md) |
+| `scripts/compress_audio.py` | Makes the Opus/AAC copies with ffmpeg and writes `audio/manifest.json` |
 | `scripts/make_catalog.mjs` | Builds `static/catalog_data.js` (`--check` to verify); exports `wavInfo`, `buildCatalog`, `render` |
 | `scripts/screenshots.py` | README screenshots into `docs/img/` |
-| `tests/*.test.mjs` | node tests: `mix_logic`, `catalog`, `legacy_player` (classic page with a fake DOM) |
+| `tests/*.test.mjs` | node tests: `mix_logic`, `catalog`, `codec_trim`, `legacy_player` (classic page with a fake DOM) |
+| `tests/align_check.js` | Browser-side check used by the smoke test: compressed copies vs WAV (length, lag, correlation) |
 | `tests/test_smoke.py` | Playwright smoke test against `python -m http.server` |
