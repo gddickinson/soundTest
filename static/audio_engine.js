@@ -10,7 +10,7 @@ import { normalise, audible, SCATTER_DEFAULT, MAX_TRACKS } from './mix_codec.js'
 import { makeSeamless } from './loop_xfade.js';
 import { planHits } from './scatter.js';
 import { sleepCurve, fadeStart } from './sleep_fade.js';
-import { loadBuffer } from './loader.js';
+import { loadSound } from './loader.js';
 
 const SEAM = 1.5;          // s of crossfade folded into each loop
 // LOOKAHEAD: scatter hits are scheduled this far ahead on the audio clock, so background tabs (timers throttled to
@@ -60,7 +60,7 @@ class Engine extends EventTarget {
     if (l.state === 'ready' || l.state === 'loading') return;
     l.state = 'loading'; this.#emit('change');
     try {
-      const buf = await loadBuffer(this.ctx, l.s.file, l.s.kb * 1024);
+      const buf = await loadSound(this.ctx, l.s);
       l.buf = buf;
       const seamless = makeSeamless([...Array(buf.numberOfChannels)].map((_, i) => buf.getChannelData(i)), buf.sampleRate, SEAM);
       l.loopBuf = this.ctx.createBuffer(seamless.length, seamless[0].length, buf.sampleRate);
@@ -225,7 +225,7 @@ class Engine extends EventTarget {
     const s = sound(id), c = this.ensure();
     if (!s) return;
     await c.resume();
-    const buf = await loadBuffer(c, s.file, s.kb * 1024);
+    const buf = await loadSound(c, s);
     this.stopPreview();
     const src = this.previewSrc = c.createBufferSource();
     src.buffer = buf; src.connect(this.preview); src.start();

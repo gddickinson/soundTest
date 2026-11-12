@@ -44,15 +44,20 @@ def base():
 
 
 @pytest.fixture(scope="session")
-def browser():
+def pw():
     with sync_playwright() as p:
-        args = ["--autoplay-policy=no-user-gesture-required"]
-        try:
-            b = p.chromium.launch(channel="chrome", args=args)
-        except Exception:
-            b = p.chromium.launch(args=args)
-        yield b
-        b.close()
+        yield p
+
+
+@pytest.fixture(scope="session")
+def browser(pw):
+    args = ["--autoplay-policy=no-user-gesture-required"]
+    try:
+        b = pw.chromium.launch(channel="chrome", args=args)
+    except Exception:
+        b = pw.chromium.launch(args=args)
+    yield b
+    b.close()
 
 
 @pytest.fixture
@@ -217,4 +222,48 @@ def test_library_search_add_and_save(page, base):
     assert "Test mix" in page.inner_text("#app")
     page.click("[data-del='Test mix']")
     assert "Test mix" not in page.inner_text("#app")
+    assert page.errors == []
+
+
+# ---- compressed copies decode to the WAV's exact length and alignment ---------------------------------------------
+ALIGN_FILES = ["audio/whitenoise/pinknoise.wav", "audio/ocean_sounds/water-sounds-ocean-ocean-waves-66.wav",
+               "audio/Korg-DS-8-Sci-Fi-Sound-Effects-Pack/glitch24.wav", "audio/ocean_sounds/oceano.wav"]
+
+
+def check_alignment(page, base):
+    page.goto(base)
+    js = (ROOT / "tests" / "align_check.js").read_text().split("\n", 2)[2]
+    rows = [r for rate in (44100, 48000) for r in page.evaluate(js, [ALIGN_FILES, rate])]
+    decoded = [r for r in rows if "error" not in r]
+    assert decoded, rows
+    for r in decoded:
+        assert r["len"] == r["lenRef"], r                        # exact WAV length after trimming
+        assert r["start"][0] == 0 and r["end"][0] == 0, r        # no offset at the first or last samples
+        assert r["start"][1] > 0.85 and r["end"][1] > 0.85, r    # and the same waveform (lossy, so not bit-exact)
+    return rows
+
+
+def test_compressed_copies_align_with_wavs_chrome(page, base):
+    rows = check_alignment(page, base)
+    assert {r["fmt"] for r in rows if "error" not in r} == {"opus", "m4a"}   # Chrome decodes both
+    assert page.errors == []
+
+
+def test_compressed_copies_align_with_wavs_webkit(pw, base):
+    try:
+        b = pw.webkit.launch()
+    except Exception as e:
+        pytest.skip(f"Playwright WebKit not installed: {str(e).splitlines()[0][:80]}")
+    try:
+        check_alignment(b.new_page(), base)       # formats WebKit cannot decode come back as errors and are skipped
+    finally:
+        b.close()
+
+
+def test_player_uses_opus_in_chrome(page, base):
+    goto(page, base + "#/mixer?mix=v1~m80~pinknoise.50.0.L")
+    page.click("#mx-play")
+    wait_ready(page, 1)
+    fmt = page.evaluate("async () => (await import('./static/loader.js')).loadState('audio/whitenoise/pinknoise.wav').format")
+    assert fmt == "opus"
     assert page.errors == []
