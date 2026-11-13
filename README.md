@@ -101,7 +101,7 @@ fetches from `file://`.
 ## Tests
 
 ```bash
-node --test tests/                 # mix links, sleep fade, seamless loops, scatter, sound catalogue, classic page
+node --test tests/*.test.mjs       # mix links, sleep fade, seamless loops, scatter, sound catalogue, classic page
 python -m pytest -q tests/         # Playwright smoke test (needs pytest + playwright, and Chrome or Playwright's Chromium)
 node scripts/make_catalog.mjs      # regenerate static/catalog_data.js after adding/removing WAVs
 python scripts/synth_sounds.py     # regenerate the 52 original sounds (numpy; --check compares with the WAVs)
