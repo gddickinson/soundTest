@@ -100,7 +100,7 @@ def test_legacy_player_does_not_download_every_wav_on_load(page, base):
 
 
 # ---- the new mixer site ------------------------------------------------------------------------------------------
-ROUTES = ["", "mixer", "visualiser", "presets", "credits", "about"]
+ROUTES = ["", "mixer", "visualiser", "presets", "sounds", "sounds/chime-3", "sounds/ocean-waves-40", "synth", "credits", "about"]
 ENGINE = "(await import('./static/audio_engine.js')).engine"
 
 

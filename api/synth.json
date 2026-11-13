@@ -1,0 +1,2692 @@
+{
+ "max_seconds": 20.0,
+ "max_seed": 4294967295,
+ "min_seconds": 0.05,
+ "sounds": [
+  {
+   "channels": 2,
+   "default_duration": 2.0005,
+   "duration": 2.0005,
+   "file": "audio/bells_chimes/0.wav",
+   "how": "tube model struck at A5",
+   "id": "chime-0",
+   "loop": false,
+   "name": "Chime 0",
+   "params": [
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 0.7,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.1,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.2,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "single_strikes",
+   "seed": 3519740784
+  },
+  {
+   "channels": 2,
+   "default_duration": 8.2166,
+   "duration": 8.2166,
+   "file": "audio/bells_chimes/1.wav",
+   "how": "tube model struck at D5, F#5, A5, D6, B5",
+   "id": "chime-1",
+   "loop": false,
+   "name": "Chime 1",
+   "params": [
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 1.6,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.1,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.2,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "single_strikes",
+   "seed": 4012582080
+  },
+  {
+   "channels": 2,
+   "default_duration": 3.6974,
+   "duration": 3.6974,
+   "file": "audio/bells_chimes/2.wav",
+   "how": "glass model struck at G5, D6",
+   "id": "chime-2",
+   "loop": false,
+   "name": "Chime 2",
+   "params": [
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "glass",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 0.9,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.1,
+     "name": "decay"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.2,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "single_strikes",
+   "seed": 2877991440
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.6525,
+   "duration": 2.6525,
+   "file": "audio/bells_chimes/3.wav",
+   "how": "tube model struck at G4",
+   "id": "chime-3",
+   "loop": false,
+   "name": "Chime 3",
+   "params": [
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.1,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.2,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "single_strikes",
+   "seed": 2557137312
+  },
+  {
+   "channels": 2,
+   "default_duration": 20.0,
+   "duration": 29.7937,
+   "file": "audio/bells_chimes/4.wav",
+   "how": "wind chimes: tube model, major pentatonic on C5",
+   "id": "chime-4",
+   "loop": true,
+   "name": "Chime 4",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "major_penta",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 72,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 3.5,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.5,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 642424240
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 25.6287,
+   "file": "audio/bells_chimes/5.wav",
+   "how": "wind chimes: bowl model, sus on C4",
+   "id": "chime-5",
+   "loop": true,
+   "name": "Chime 5",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "sus",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 60,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.25,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "bowl",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 6,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 1.2,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 430605824
+  },
+  {
+   "channels": 1,
+   "default_duration": 15.5544,
+   "duration": 15.5544,
+   "file": "audio/bells_chimes/6.wav",
+   "how": "wind chimes: glass model, major pentatonic on C6",
+   "id": "chime-6",
+   "loop": true,
+   "name": "Chime 6",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "major_penta",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 84,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 1.2,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "glass",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 1.5,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 1628066000
+  },
+  {
+   "channels": 1,
+   "default_duration": 10.882,
+   "duration": 10.882,
+   "file": "audio/bells_chimes/7.wav",
+   "how": "wind chimes: tube model, minor pentatonic on A4",
+   "id": "chime-7",
+   "loop": true,
+   "name": "Chime 7",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "minor_penta",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 69,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.9,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 3,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 1676293984
+  },
+  {
+   "channels": 1,
+   "default_duration": 11.202,
+   "duration": 11.202,
+   "file": "audio/bells_chimes/8.wav",
+   "how": "wind chimes: bell model, lydian on C4",
+   "id": "chime-8",
+   "loop": true,
+   "name": "Chime 8",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "lydian",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 60,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.4,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "bell",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 4,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 3793404591
+  },
+  {
+   "channels": 1,
+   "default_duration": 19.4596,
+   "duration": 19.4596,
+   "file": "audio/bells_chimes/9.wav",
+   "how": "wind chimes: tube model, hirajoshi on D5",
+   "id": "chime-9",
+   "loop": true,
+   "name": "Chime 9",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "hirajoshi",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 74,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.7,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 3.5,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 3736787199
+  },
+  {
+   "channels": 1,
+   "default_duration": 15.1068,
+   "duration": 15.1068,
+   "file": "audio/bells_chimes/10.wav",
+   "how": "wind chimes: tube model, major pentatonic on G3",
+   "id": "chime-10",
+   "loop": true,
+   "name": "Chime 10",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "major_penta",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 55,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.4,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 6,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.4,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 4278300651
+  },
+  {
+   "channels": 1,
+   "default_duration": 11.4581,
+   "duration": 11.4581,
+   "file": "audio/bells_chimes/11.wav",
+   "how": "wind chimes: glass model, whole tone on D6",
+   "id": "chime-11",
+   "loop": true,
+   "name": "Chime 11",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "whole_tone",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 86,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 1.5,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "glass",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 1.2,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 3252803643
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 22.02,
+   "file": "audio/bells_chimes/12.wav",
+   "how": "wind chimes: tube model, sus on G4",
+   "id": "chime-12",
+   "loop": true,
+   "name": "Chime 12",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "sus",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 67,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 4,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.15,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 2286026379
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 30.7256,
+   "file": "audio/bells_chimes/13.wav",
+   "how": "wind chimes: bowl model, minor pentatonic on A3",
+   "id": "chime-13",
+   "loop": true,
+   "name": "Chime 13",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "minor_penta",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 57,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.2,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "bowl",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 8,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 3147965723
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 47.3687,
+   "file": "audio/bells_chimes/14.wav",
+   "how": "wind chimes: tube model, major pentatonic on E4",
+   "id": "chime-14",
+   "loop": true,
+   "name": "Chime 14",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "major_penta",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 64,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.5,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 5,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 159467819
+  },
+  {
+   "channels": 1,
+   "default_duration": 17.6246,
+   "duration": 17.6246,
+   "file": "audio/bells_chimes/15.wav",
+   "how": "wind chimes: bell model, hirajoshi on G4",
+   "id": "chime-15",
+   "loop": true,
+   "name": "Chime 15",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "hirajoshi",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 67,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "bell",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 5,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 912339579
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 30.2562,
+   "file": "audio/bells_chimes/16.wav",
+   "how": "wind chimes: tube model, lydian on E5",
+   "id": "chime-16",
+   "loop": true,
+   "name": "Chime 16",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "lydian",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 76,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.9,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 2.5,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.1,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 1942068299
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 25.2959,
+   "file": "audio/bells_chimes/17.wav",
+   "how": "wind chimes: tube model, minor pentatonic on C4",
+   "id": "chime-17",
+   "loop": true,
+   "name": "Chime 17",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "minor_penta",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 60,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.35,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 6,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.45,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 1361150939
+  },
+  {
+   "channels": 1,
+   "default_duration": 19.2035,
+   "duration": 19.2035,
+   "file": "audio/bells_chimes/18.wav",
+   "how": "wind chimes: glass model, major pentatonic on G5",
+   "id": "chime-18",
+   "loop": true,
+   "name": "Chime 18",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "major_penta",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 79,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 1.0,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "glass",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 2,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 3471963692
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 21.8532,
+   "file": "audio/bells_chimes/19.wav",
+   "how": "wind chimes: bell model, sus on D4",
+   "id": "chime-19",
+   "loop": true,
+   "name": "Chime 19",
+   "params": [
+    {
+     "choices": [
+      "hirajoshi",
+      "lydian",
+      "major_penta",
+      "minor_penta",
+      "sus",
+      "whole_tone"
+     ],
+     "default": "sus",
+     "kind": "choice",
+     "name": "scale"
+    },
+    {
+     "default": 62,
+     "kind": "int",
+     "max": 96,
+     "min": 36,
+     "name": "root"
+    },
+    {
+     "default": 0.35,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.05,
+     "name": "density"
+    },
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "bell",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 4.5,
+     "kind": "float",
+     "max": 10.0,
+     "min": 0.3,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 0.5,
+     "min": 0.0,
+     "name": "breeze"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "chime_sequence",
+   "seed": 4061269372
+  },
+  {
+   "channels": 2,
+   "default_duration": 4.25,
+   "duration": 4.25,
+   "file": "audio/bells_chimes/Gong.wav",
+   "how": "48 inharmonic partials with bloom",
+   "id": "gong",
+   "loop": false,
+   "name": "Gong",
+   "params": [
+    {
+     "default": 70,
+     "kind": "float",
+     "max": 400.0,
+     "min": 30.0,
+     "name": "f0"
+    },
+    {
+     "default": 48,
+     "kind": "int",
+     "max": 64,
+     "min": 4,
+     "name": "count"
+    },
+    {
+     "default": 1.1,
+     "kind": "float",
+     "max": 4.0,
+     "min": 0.2,
+     "name": "decay"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "gong",
+   "seed": 3828549250
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.757,
+   "duration": 2.757,
+   "file": "audio/bells_chimes/bellschimes-plastic-mallet-dinging-steel-tube.wav",
+   "how": "tube model struck at C6",
+   "id": "bellschimes-plastic-mallet-dinging-steel-tube",
+   "loop": false,
+   "name": "Plastic mallet on steel tube",
+   "params": [
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "tube",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.1,
+     "name": "decay"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.2,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "single_strikes",
+   "seed": 460667758
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.1849,
+   "duration": 2.1849,
+   "file": "audio/bells_chimes/Casio-MT-600-Synth-Bells-C3.wav",
+   "how": "FM synthesis",
+   "id": "casio-mt-600-synth-bells-c3",
+   "loop": false,
+   "name": "Synth bells C3",
+   "params": [
+    {
+     "default": 130.8127826502993,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    },
+    {
+     "default": 3.5,
+     "kind": "float",
+     "max": 8.0,
+     "min": 0.5,
+     "name": "ratio"
+    },
+    {
+     "default": 8.0,
+     "kind": "float",
+     "max": 20.0,
+     "min": 0.0,
+     "name": "index"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.1,
+     "name": "decay"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "fm_bell",
+   "seed": 870010959
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.7557,
+   "duration": 2.7557,
+   "file": "audio/bells_chimes/Ensoniq-ESQ-1-Wave-Bell-C4.wav",
+   "how": "bell model struck at C4",
+   "id": "ensoniq-esq-1-wave-bell-c4",
+   "loop": false,
+   "name": "Wave bell C4",
+   "params": [
+    {
+     "choices": [
+      "bell",
+      "bowl",
+      "glass",
+      "tube"
+     ],
+     "default": "bell",
+     "kind": "choice",
+     "name": "timbre"
+    },
+    {
+     "default": 0.9,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.1,
+     "name": "decay"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.1,
+     "name": "hardness"
+    },
+    {
+     "default": 0.0,
+     "kind": "float",
+     "max": 3.0,
+     "min": 0.0,
+     "name": "beat"
+    },
+    {
+     "default": 0.2,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "single_strikes",
+   "seed": 3873840833
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.8976,
+   "duration": 2.8976,
+   "file": "audio/Alesis-Fusion-Acoustic-Bass-C2.wav",
+   "how": "plucked-string model (Karplus-Strong)",
+   "id": "alesis-fusion-acoustic-bass-c2",
+   "loop": false,
+   "name": "Acoustic bass C2",
+   "params": [
+    {
+     "default": 65.40639132514966,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    },
+    {
+     "default": 0.998,
+     "kind": "float",
+     "max": 0.9995,
+     "min": 0.98,
+     "name": "decay"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.0,
+     "name": "bright"
+    },
+    {
+     "default": 0.15,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "pluck",
+   "seed": 2604564176
+  },
+  {
+   "channels": 2,
+   "default_duration": 6.4498,
+   "duration": 6.4498,
+   "file": "audio/Casio-VZ-10M-Astral-C2.wav",
+   "how": "six detuned additive voices",
+   "id": "casio-vz-10m-astral-c2",
+   "loop": false,
+   "name": "Astral pad C2",
+   "params": [
+    {
+     "default": 65.40639132514966,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "astral_pad",
+   "seed": 1126097288
+  },
+  {
+   "channels": 2,
+   "default_duration": 1.8561,
+   "duration": 1.8561,
+   "file": "audio/Alesis-S4-Plus-Bari-Sax-C2.wav",
+   "how": "additive tone with reed formants and breath",
+   "id": "alesis-s4-plus-bari-sax-c2",
+   "loop": false,
+   "name": "Baritone sax C2",
+   "params": [
+    {
+     "default": 65.40639132514966,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "bari_sax",
+   "seed": 4258981888
+  },
+  {
+   "channels": 2,
+   "default_duration": 3.3593,
+   "duration": 3.3593,
+   "file": "audio/Bowed-Bass-C2.wav",
+   "how": "additive tone with body formants and bow noise",
+   "id": "bowed-bass-c2",
+   "loop": false,
+   "name": "Bowed bass C2",
+   "params": [
+    {
+     "default": 65.40639132514966,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "bowed_bass",
+   "seed": 1524833866
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.1887,
+   "duration": 2.1887,
+   "file": "audio/Casio-VZ-10M-Buzzy-Deep-Bass-C1.wav",
+   "how": "additive saw, saturated",
+   "id": "casio-vz-10m-buzzy-deep-bass-c1",
+   "loop": false,
+   "name": "Buzzy deep bass C1",
+   "params": [
+    {
+     "default": 32.70319566257483,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "buzzy_bass",
+   "seed": 690044523
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.2882,
+   "duration": 2.2882,
+   "file": "audio/E-Mu-Proteus-2-Flute-C5.wav",
+   "how": "additive tone with breath noise and vibrato",
+   "id": "e-mu-proteus-2-flute-c5",
+   "loop": false,
+   "name": "Flute C5",
+   "params": [
+    {
+     "default": 523.2511306011972,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "flute",
+   "seed": 1218356520
+  },
+  {
+   "channels": 2,
+   "default_duration": 3.9234,
+   "duration": 3.9234,
+   "file": "audio/Roland-U-220-Unconvincing-Guitar-C4.wav",
+   "how": "plucked-string model (Karplus-Strong)",
+   "id": "roland-u-220-unconvincing-guitar-c4",
+   "loop": false,
+   "name": "Guitar C4",
+   "params": [
+    {
+     "default": 261.6255653005986,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    },
+    {
+     "default": 0.996,
+     "kind": "float",
+     "max": 0.9995,
+     "min": 0.98,
+     "name": "decay"
+    },
+    {
+     "default": 0.7,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.0,
+     "name": "bright"
+    },
+    {
+     "default": 0.15,
+     "kind": "float",
+     "max": 0.8,
+     "min": 0.0,
+     "name": "wet"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "pluck",
+   "seed": 3962967139
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.4244,
+   "duration": 2.4244,
+   "file": "audio/Alesis-Fusion-Sitar-C4.wav",
+   "how": "plucked string with buzzing bridge",
+   "id": "alesis-fusion-sitar-c4",
+   "loop": false,
+   "name": "Sitar C4",
+   "params": [
+    {
+     "default": 261.6255653005986,
+     "kind": "float",
+     "max": 2000.0,
+     "min": 20.0,
+     "name": "f0"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "sitar",
+   "seed": 378618332
+  },
+  {
+   "channels": 2,
+   "default_duration": 4.0447,
+   "duration": 4.0447,
+   "file": "audio/Korg-M1-Drop.wav",
+   "how": "falling sine bloop with ping-pong echo",
+   "id": "korg-m1-drop",
+   "loop": false,
+   "name": "Synth drop",
+   "params": [],
+   "rate": 44100,
+   "recipe": "synth_drop",
+   "seed": 2627529443
+  },
+  {
+   "channels": 2,
+   "default_duration": 0.4111,
+   "duration": 0.4111,
+   "file": "audio/E-Mu-Proteus-FX-Wacky-Snare.wav",
+   "how": "noise rattle, falling tone and boing",
+   "id": "e-mu-proteus-fx-wacky-snare",
+   "loop": false,
+   "name": "Wacky snare",
+   "params": [],
+   "rate": 44100,
+   "recipe": "wacky_snare",
+   "seed": 1757057651
+  },
+  {
+   "channels": 1,
+   "default_duration": 10.0,
+   "duration": 10.0,
+   "file": "audio/whitenoise/pinknoise.wav",
+   "how": "noise shaped to 1/f in the frequency domain",
+   "id": "pinknoise",
+   "loop": true,
+   "name": "Pink noise",
+   "params": [],
+   "rate": 44100,
+   "recipe": "pink",
+   "seed": 2965078432
+  },
+  {
+   "channels": 1,
+   "default_duration": 10.0,
+   "duration": 10.0,
+   "file": "audio/whitenoise/whitenoise.wav",
+   "how": "uniform random samples",
+   "id": "whitenoise",
+   "loop": true,
+   "name": "White noise",
+   "params": [],
+   "rate": 44100,
+   "recipe": "white_uniform",
+   "seed": 2416763709
+  },
+  {
+   "channels": 1,
+   "default_duration": 10.0,
+   "duration": 10.0,
+   "file": "audio/whitenoise/whitenoisegaussian.wav",
+   "how": "Gaussian random samples",
+   "id": "whitenoisegaussian",
+   "loop": true,
+   "name": "White noise (Gaussian)",
+   "params": [],
+   "rate": 44100,
+   "recipe": "white_gauss",
+   "seed": 2401274899
+  },
+  {
+   "channels": 1,
+   "default_duration": 15.1218,
+   "duration": 15.1218,
+   "file": "audio/ocean_sounds/Digital-Seashore.wav",
+   "how": "filtered-noise swell with a resonant band",
+   "id": "digital-seashore",
+   "loop": true,
+   "name": "Digital seashore",
+   "params": [
+    {
+     "default": 2,
+     "kind": "int",
+     "max": 4,
+     "min": 1,
+     "name": "waves"
+    },
+    {
+     "default": 2000,
+     "kind": "float",
+     "max": 6000.0,
+     "min": 300.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 0.5,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "seashore_synth",
+   "seed": 1715791330
+  },
+  {
+   "channels": 2,
+   "default_duration": 2.7661,
+   "duration": 2.7661,
+   "file": "audio/ocean_sounds/Flowing-Water.wav",
+   "how": "hundreds of synthesised bubbles over filtered noise",
+   "id": "flowing-water",
+   "loop": true,
+   "name": "Flowing water",
+   "params": [
+    {
+     "default": 70,
+     "kind": "float",
+     "max": 200.0,
+     "min": 5.0,
+     "name": "rate"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "flowing_water",
+   "seed": 2593331403
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 144.579,
+   "file": "audio/ocean_sounds/water-sounds-ocean-ocean-waves-40.wav",
+   "how": "filtered noise swelling in waves every ~10 s, with crash and foam layers",
+   "id": "ocean-waves-40",
+   "loop": true,
+   "name": "Ocean waves 40",
+   "params": [
+    {
+     "default": 10,
+     "kind": "float",
+     "max": 20.0,
+     "min": 2.0,
+     "name": "period"
+    },
+    {
+     "default": 2.5,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.3,
+     "name": "rise"
+    },
+    {
+     "default": 6.5,
+     "kind": "float",
+     "max": 12.0,
+     "min": 0.5,
+     "name": "fall"
+    },
+    {
+     "default": 0.2,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.0,
+     "name": "calm"
+    },
+    {
+     "default": 900,
+     "kind": "float",
+     "max": 5000.0,
+     "min": 200.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    },
+    {
+     "default": 0.5,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "foam"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "ocean",
+   "seed": 3310698273
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 129.1146,
+   "file": "audio/ocean_sounds/water-sounds-ocean-ocean-waves-62.wav",
+   "how": "filtered noise swelling in waves every ~12 s, with crash and foam layers",
+   "id": "ocean-waves-62",
+   "loop": true,
+   "name": "Ocean waves 62",
+   "params": [
+    {
+     "default": 12,
+     "kind": "float",
+     "max": 20.0,
+     "min": 2.0,
+     "name": "period"
+    },
+    {
+     "default": 3.0,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.3,
+     "name": "rise"
+    },
+    {
+     "default": 8.0,
+     "kind": "float",
+     "max": 12.0,
+     "min": 0.5,
+     "name": "fall"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.0,
+     "name": "calm"
+    },
+    {
+     "default": 500,
+     "kind": "float",
+     "max": 5000.0,
+     "min": 200.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 0.3,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    },
+    {
+     "default": 0.25,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "foam"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "ocean",
+   "seed": 4099804472
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 25.9019,
+   "file": "audio/ocean_sounds/water-sounds-ocean-ocean-waves-66.wav",
+   "how": "filtered noise swelling in waves every ~8.5 s, with crash and foam layers",
+   "id": "ocean-waves-66",
+   "loop": true,
+   "name": "Ocean waves 66",
+   "params": [
+    {
+     "default": 8.5,
+     "kind": "float",
+     "max": 20.0,
+     "min": 2.0,
+     "name": "period"
+    },
+    {
+     "default": 2.0,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.3,
+     "name": "rise"
+    },
+    {
+     "default": 5.5,
+     "kind": "float",
+     "max": 12.0,
+     "min": 0.5,
+     "name": "fall"
+    },
+    {
+     "default": 0.18,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.0,
+     "name": "calm"
+    },
+    {
+     "default": 900,
+     "kind": "float",
+     "max": 5000.0,
+     "min": 200.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    },
+    {
+     "default": 0.5,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "foam"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "ocean",
+   "seed": 131951480
+  },
+  {
+   "channels": 1,
+   "default_duration": 20.0,
+   "duration": 119.656,
+   "file": "audio/ocean_sounds/water-oceans-and-seas-ocean-waves-strong-tide.wav",
+   "how": "filtered noise swelling in waves every ~7 s, with crash and foam layers",
+   "id": "ocean-waves-strong-tide",
+   "loop": true,
+   "name": "Ocean waves, strong tide",
+   "params": [
+    {
+     "default": 7,
+     "kind": "float",
+     "max": 20.0,
+     "min": 2.0,
+     "name": "period"
+    },
+    {
+     "default": 1.6,
+     "kind": "float",
+     "max": 6.0,
+     "min": 0.3,
+     "name": "rise"
+    },
+    {
+     "default": 4.5,
+     "kind": "float",
+     "max": 12.0,
+     "min": 0.5,
+     "name": "fall"
+    },
+    {
+     "default": 0.25,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.0,
+     "name": "calm"
+    },
+    {
+     "default": 1300,
+     "kind": "float",
+     "max": 5000.0,
+     "min": 200.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 1.2,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "foam"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "ocean",
+   "seed": 1397078867
+  },
+  {
+   "channels": 1,
+   "default_duration": 5.0212,
+   "duration": 5.0212,
+   "file": "audio/ocean_sounds/oceano.wav",
+   "how": "filtered-noise swell",
+   "id": "oceano",
+   "loop": true,
+   "name": "Oceano",
+   "params": [
+    {
+     "default": 1,
+     "kind": "int",
+     "max": 4,
+     "min": 1,
+     "name": "waves"
+    },
+    {
+     "default": 1600,
+     "kind": "float",
+     "max": 6000.0,
+     "min": 300.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 0.5,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    }
+   ],
+   "rate": 11025,
+   "recipe": "seashore_synth",
+   "seed": 935283518
+  },
+  {
+   "channels": 2,
+   "default_duration": 3.7115,
+   "duration": 3.7115,
+   "file": "audio/ocean_sounds/Kawai-K11-Seashore.wav",
+   "how": "filtered-noise swell",
+   "id": "kawai-k11-seashore",
+   "loop": true,
+   "name": "Seashore (bright swell)",
+   "params": [
+    {
+     "default": 1,
+     "kind": "int",
+     "max": 4,
+     "min": 1,
+     "name": "waves"
+    },
+    {
+     "default": 2500,
+     "kind": "float",
+     "max": 6000.0,
+     "min": 300.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "seashore_synth",
+   "seed": 2122904212
+  },
+  {
+   "channels": 2,
+   "default_duration": 5.2449,
+   "duration": 5.2449,
+   "file": "audio/ocean_sounds/Roland-SC-88-Seashore.wav",
+   "how": "filtered-noise swell",
+   "id": "roland-sc-88-seashore",
+   "loop": true,
+   "name": "Seashore (crashing)",
+   "params": [
+    {
+     "default": 1,
+     "kind": "int",
+     "max": 4,
+     "min": 1,
+     "name": "waves"
+    },
+    {
+     "default": 3000,
+     "kind": "float",
+     "max": 6000.0,
+     "min": 300.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 0.8,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "seashore_synth",
+   "seed": 2462773116
+  },
+  {
+   "channels": 2,
+   "default_duration": 6.0936,
+   "duration": 6.0936,
+   "file": "audio/ocean_sounds/Korg-N1R-Seashore.wav",
+   "how": "filtered-noise swell with a resonant band",
+   "id": "korg-n1r-seashore",
+   "loop": true,
+   "name": "Seashore (resonant)",
+   "params": [
+    {
+     "default": 1,
+     "kind": "int",
+     "max": 4,
+     "min": 1,
+     "name": "waves"
+    },
+    {
+     "default": 1500,
+     "kind": "float",
+     "max": 6000.0,
+     "min": 300.0,
+     "name": "cutoff"
+    },
+    {
+     "default": 0.4,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "crash"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "seashore_synth",
+   "seed": 1296567974
+  },
+  {
+   "channels": 2,
+   "default_duration": 0.9942,
+   "duration": 0.9942,
+   "file": "audio/Water-Drop.wav",
+   "how": "two synthesised bubbles (rising sine) in a small room",
+   "id": "water-drop",
+   "loop": false,
+   "name": "Water drop",
+   "params": [],
+   "rate": 44100,
+   "recipe": "water_drop",
+   "seed": 3331062906
+  },
+  {
+   "channels": 2,
+   "default_duration": 20.0,
+   "duration": 21.3203,
+   "file": "audio/Ensoniq-ESQ-1-Wind.wav",
+   "how": "resonant noise bands with slow periodic gusts",
+   "id": "ensoniq-esq-1-wind",
+   "loop": true,
+   "name": "Howling wind",
+   "params": [
+    {
+     "default": 12,
+     "kind": "float",
+     "max": 30.0,
+     "min": 2.0,
+     "name": "q"
+    },
+    {
+     "default": 1.2,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "whistle"
+    },
+    {
+     "default": 0.6,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "body"
+    },
+    {
+     "default": 0.25,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.0,
+     "name": "air"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "wind",
+   "seed": 2642848620
+  },
+  {
+   "channels": 2,
+   "default_duration": 11.3997,
+   "duration": 11.3997,
+   "file": "audio/Alesis-Sanctuary-QCard-Wind.wav",
+   "how": "resonant noise bands with slow periodic gusts",
+   "id": "alesis-sanctuary-qcard-wind",
+   "loop": true,
+   "name": "Low wind",
+   "params": [
+    {
+     "default": 6,
+     "kind": "float",
+     "max": 30.0,
+     "min": 2.0,
+     "name": "q"
+    },
+    {
+     "default": 0.7,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "whistle"
+    },
+    {
+     "default": 0.9,
+     "kind": "float",
+     "max": 2.0,
+     "min": 0.0,
+     "name": "body"
+    },
+    {
+     "default": 0.03,
+     "kind": "float",
+     "max": 1.0,
+     "min": 0.0,
+     "name": "air"
+    }
+   ],
+   "rate": 44100,
+   "recipe": "wind",
+   "seed": 677299761
+  },
+  {
+   "channels": 2,
+   "default_duration": 3.3639,
+   "duration": 3.3639,
+   "file": "audio/Kawai-K5000W-Thunder.wav",
+   "how": "noise crack and low rolling rumble",
+   "id": "kawai-k5000w-thunder",
+   "loop": false,
+   "name": "Thunder",
+   "params": [],
+   "rate": 44100,
+   "recipe": "thunder",
+   "seed": 3447151612
+  },
+  {
+   "channels": 2,
+   "default_duration": 3.8099,
+   "duration": 3.8099,
+   "file": "audio/Casio-MT-600-Typhoon-Sound.wav",
+   "how": "gusting noise bands plus synthesised rain patter",
+   "id": "casio-mt-600-typhoon-sound",
+   "loop": true,
+   "name": "Typhoon",
+   "params": [],
+   "rate": 44100,
+   "recipe": "typhoon",
+   "seed": 2130480096
+  }
+ ]
+}

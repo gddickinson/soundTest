@@ -28,10 +28,15 @@ ROOT = Path(__file__).resolve().parent.parent
 BASE_SEED = 20261111
 
 
-def render(entry):
-    """float array (channels, frames) for one SPEC entry, normalised, edges finished."""
+def seed_for(file):
+    """The fixed seed of one sound (BASE_SEED + crc32 of its file name)."""
+    return BASE_SEED + zlib.crc32(file.encode())
+
+
+def render(entry, seed=None):
+    """float array (channels, frames) for one SPEC entry, normalised, edges finished. `seed` overrides seed_for(file)."""
     file, frames, sr, ch, orig_db, loop, recipe, kw = entry
-    rng = np.random.default_rng(BASE_SEED + zlib.crc32(file.encode()))
+    rng = np.random.default_rng(seed_for(file) if seed is None else seed)
     kw = dict(kw)
     soft = kw.pop('soft', False)
     x = np.asarray(recipe(frames, sr, ch, rng, **kw), dtype=np.float64)[:ch, :frames]

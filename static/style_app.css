@@ -124,3 +124,10 @@ dialog td { padding:4px 8px; font-size:14px; }
   .strip-grid { grid-template-columns:1fr; }
   .top .right { gap:14px; }
 }
+
+/* sounds and synth pages */
+.sounds .dot-c { display:inline-block; margin-right:6px; vertical-align:middle; }
+.sounds td small { display:block; }
+.stage.plot { padding:6px; } .stage.plot canvas { height:auto; }
+#sa, #au { width:100%; max-width:520px; margin:6px 0; display:block; }
+#out .btn { margin-top:0; }

@@ -1,0 +1,14 @@
+{
+ "formats": [
+  "wav",
+  "opus",
+  "m4a"
+ ],
+ "generated": 52,
+ "max_synth_seconds": 20.0,
+ "original": 52,
+ "server": false,
+ "sounds": 88,
+ "third_party": 36,
+ "title": "soundTest"
+}

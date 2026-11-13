@@ -42,3 +42,18 @@
 - Purged from all history with git-filter-repo and force-pushed: the 52 replaced recordings (old WAV blobs plus the Opus/AAC copies made from them, 156 blobs; the current files and the Korg DS-8 pack are untouched).
   The current tree is unchanged (identical HEAD tree before/after); commit hashes changed, so old clones must be
   re-cloned or reset to origin. A pre-rewrite mirror backup was kept outside the repo.
+
+## 2026-11-13: local Python backend (FastAPI) for Project Hub
+- `run_web.py` (127.0.0.1:8243; 8161 from the brief is gps-tracker's port in the hub) + `web/`: serves the existing
+  front end unchanged on disk (index.html is served with `window.APP_STATIC = false`) and `/api`: info, sounds
+  (facts read from each WAV: duration, rate, channels, bits, peak/RMS dBFS, licence, sizes), `/api/sound/{id}`
+  (WAV/Opus/AAC with correct types and 206 range requests), `/api/analyse/{id}` (numpy levels, waveform peaks,
+  averaged spectrum in log bands), `GET/POST /api/synth` (renders the 52 original sounds with `scripts/synth/`;
+  bounded per-recipe settings, 0.05–20 s, seed; extra fields/unknown settings are 422; default = the committed WAV).
+- Static site keeps working on Pages: `api/*.json` exported by `scripts/export_api.py`, `static/static_api.js`;
+  analysis runs in the browser (`static/analysis.js`), synthesis says it needs the local app.
+- New pages `#/sounds`, `#/sounds/<id>`, `#/synth`. `scripts/synth_sounds.render` takes an optional `seed`.
+- Python/JS agreement: `tests/fixtures/analysis.json` (3 real excerpts: stereo, shorter than nfft, 11025 Hz) and
+  `tests/analysis.test.mjs`: agree within 1e-9 (spectrum dB 1e-7).
+- Fix: the documented `node --test tests/` fails on Node 22 (no tests run); now `node --test tests/*.test.mjs`.
+- `scripts/screenshots.py` rewritten: `--static` / `--base` smoke test of every route at 1280 and 390 px.

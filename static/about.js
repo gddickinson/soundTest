@@ -11,7 +11,9 @@ route('about', () => {
       ${T.sounds} sounds in this repository (52 synthesised for it, 36 from the Korg DS-8 pack), by G.D. Dickinson.</p>
     <div class="two">
       <div class="panel"><h3>How it works</h3><ul>
-        <li>Everything runs in your browser with the Web Audio API; there is no server beyond static files.</li>
+        <li>The mixer runs in your browser with the Web Audio API. The site works from static files alone (GitHub Pages);
+          the optional local Python app adds a server-side catalogue, numpy analysis and sound generation
+          (<a href="#/sounds">Sounds</a>, <a href="#/synth">Synth</a>).</li>
         <li>A sound is downloaded only when it is used, with progress shown, as Opus (or AAC on browsers without Opus, else
           the WAV): about 11 MB for the whole library instead of 128 MB. The decoded audio is cut back to the WAV's exact
           start and length (the encoders add a little silence), so loops stay seamless.</li>
@@ -30,13 +32,16 @@ route('about', () => {
       <div class="panel"><h3>Run it locally</h3>
         <pre>git clone https://github.com/gddickinson/soundTest.git
 cd soundTest
-python3 -m http.server 8000
-# open http://localhost:8000/</pre>
-        <p class="small mute">Any static file server works. Opening index.html straight from disk does not: browsers block
-          ES modules and audio fetches from <code>file://</code>.</p></div>
+pip install -r requirements-web.txt
+python run_web.py
+# open http://127.0.0.1:8243/</pre>
+        <p class="small mute">The local app (FastAPI) serves the same site plus <code>/api</code>: the catalogue with facts read
+          from the WAVs, streaming with range requests, numpy waveform/spectrum analysis and server-side synthesis.
+          Without Python, any static file server works (<code>python3 -m http.server</code>) and generating sounds is off.
+          Opening index.html straight from disk does not work: browsers block ES modules from <code>file://</code>.</p></div>
       <div class="panel"><h3>Tests</h3>
-        <pre>node --test tests/          # mix links, timer fade, loops, catalog
-python -m pytest -q tests/  # Playwright smoke test</pre>
+        <pre>node --test tests/*.test.mjs  # mix links, timer fade, loops, catalog, analysis vs Python
+python -m pytest -q tests/  # web API + Playwright smoke test</pre>
         <h3>The original page</h3>
         <p>The first version (chimes, white noise, ocean, an analyser with nine bars) is kept at
           <a href="classic/">classic/</a>, with its bugs fixed.</p></div>

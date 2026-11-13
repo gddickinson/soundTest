@@ -1,6 +1,7 @@
 # INTERFACE.md — navigation map
 
-Static site (no build, no server code). `index.html` loads `static/main.js`; pages are ES modules registered with the
+Static site (no build) plus an optional local Python app. `index.html` sets `window.APP_STATIC = true` (the
+FastAPI app serves it with `false`; `core.js` `api()` then calls `/api`, else `static/static_api.js`) and loads `static/main.js`; pages are ES modules registered with the
 hash router in `static/core.js` and loaded on first visit. The audio engine is one shared instance that survives page
 changes.
 
@@ -24,6 +25,7 @@ changes.
 | `static/scatter.js` | `planHits(next, until, every, chance, rand)`, `hitsPerMinute` |
 | `static/presets.js` | `PRESETS`, `preset(key)` |
 | `static/codec_trim.js` | `FORMATS`, `formatOrder(canPlay)`, `fileFor`, `trimPlan(decodedLen, rate, entry, fmt)`, `trimChannels`, `libraryKB` |
+| `static/analysis.js` | `analyse(channels, sr, opts)`, `levels`, `waveform`, `spectrum`, `fft`, `hanning` — same maths as `web/analysis.py` (node test vs fixture) |
 
 ## Audio and browser services
 | File | Contents |
@@ -35,6 +37,9 @@ changes.
 | `static/visualiser.js` | `makeVisualiser(canvas, getAnalyser).draw(mode, t, live)`, `MODES` (spectrum, scope, orbit) |
 | `static/keys.js` | `installKeys`, `SHORTCUTS` (fires `layer-select`, `vis-next`, `timer-toggle` window events) |
 | `static/dock.js` | `mountDock` — the player bar |
+| `static/static_api.js` | `staticApi(path, body)`: static-site answers from `api/*.json`; `/analyse/<id>` computed in the browser; POST → `NeedsServer` |
+| `static/decode.js` | `decodeForAnalysis(sound)` (OfflineAudioContext at the file's rate; WAV ≤ 4 MB else Opus/AAC), `decodeBytes` |
+| `static/waveplot.js` | `drawWave`, `drawSpectrum` (canvas) |
 | `static/bg.js` | `startBackground` — subtle level-reactive background (off with reduced motion) |
 
 ## Pages (route → file)
@@ -44,20 +49,35 @@ changes.
 | `#/mixer` (`?mix=`, `?cat=`, `?q=`) | `static/mixer.js` | `library_panel.js`, `strips.js`, `timer_panel.js`, `mixes_panel.js` (also exports `load(mix)`) |
 | `#/visualiser` | `static/visual_page.js` | visualiser, full screen |
 | `#/presets` | `static/presets_page.js` | presets + saved mixes |
+| `#/sounds`, `#/sounds/<id>` | `static/sounds_page.js` | `api('/sounds')`, `api('/analyse/<id>')`, waveplot |
+| `#/synth` (`?id=`) | `static/synth_page.js` | `api('/synth')`, `POST api/synth` (local app only), analysis.js on the result |
 | `#/credits` | `static/credits.js` | fetches `THIRD_PARTY.md` and the Korg `Readme.txt`; file table |
 | `#/about` | `static/about.js` | how it works, shortcuts, run/test instructions |
+
+## Local Python app (`web/`, started by `run_web.py` on 127.0.0.1:8243)
+| File | Contents |
+|---|---|
+| `web/app.py` | `app` (FastAPI): `/` (index.html, APP_STATIC false), mounts `static/ audio/ classic/ docs/`, `THIRD_PARTY.md`/`LICENSE`/`README.md`; `/api/info`, `/api/sounds[/{id}]`, `/api/sound/{id}?format=` (range requests), `/api/analyse/{id}`, `GET/POST /api/synth`; `STATIC_ENDPOINTS` |
+| `web/catalogue.py` | `entries()` (parses `static/catalog_data.js`), `by_id`, `path_for(entry, fmt)`, `facts` (cached file levels), `describe`, `all_sounds`, `FORMATS`, `LICENCES` |
+| `web/analysis.py` | `read_wav`, `mono`, `levels`, `waveform`, `spectrum`, `analyse`, `file_levels` (chunked) |
+| `web/synth_api.py` | `PARAMS` (per-recipe bounded settings), `SPEC_BY_ID`, `describe`, `plan` (validation, `SynthError`), `wav_bytes` (uses `scripts/synth_sounds.render`) |
+| `api/*.json` | `info`, `sounds`, `synth`: the GET answers for the static site, written by `scripts/export_api.py` |
+| `requirements-web.txt` | pinned fastapi, uvicorn, numpy, httpx, pytest |
 
 ## Other
 | Path | Contents |
 |---|---|
 | `classic/` | The original page (`index.html`, `script.js`, `style.css`), audio paths `../audio/` |
 | `audio/` | 88 WAVs (52 original + 36 Korg; masters) + `.opus`/`.m4a` copies + `manifest.json` (lengths, priming) + Korg `Readme.txt` (third-party; see THIRD_PARTY.md) |
-| `scripts/synth_sounds.py` | Generates the 52 original WAVs + `audio/generated.json` (`render`, `metrics`, `--check`) |
+| `scripts/synth_sounds.py` | Generates the 52 original WAVs + `audio/generated.json` (`render(entry, seed=None)`, `seed_for`, `metrics`, `--check`) |
 | `scripts/synth/` | `dsp.py` (noise, filters, envelopes, circular rendering, reverb), `recipes_nature.py`, `recipes_tonal.py`, `spec.py` (the 52 sounds: length, rate, channels, loudness, recipe; `NAMES`, `HOW`) |
 | `scripts/compress_audio.py` | Makes the Opus/AAC copies with ffmpeg and writes `audio/manifest.json` |
 | `scripts/make_catalog.mjs` | Builds `static/catalog_data.js` (`--check` to verify); exports `wavInfo`, `buildCatalog`, `render` |
-| `scripts/screenshots.py` | README screenshots into `docs/img/` |
-| `tests/*.test.mjs` | node tests: `mix_logic`, `catalog`, `codec_trim`, `legacy_player` (classic page with a fake DOM) |
+| `scripts/screenshots.py` | Smoke test of every route (`--static` or `--base URL`; console errors, 390 px overflow, canvases drawn), `--shots`, `--readme` |
+| `scripts/export_api.py` | Writes `api/*.json` (`--check`) |
+| `scripts/make_analysis_fixture.py` | Writes `tests/fixtures/analysis.json` (real WAV excerpts + Python analysis) |
+| `tests/*.test.mjs` | node tests: `mix_logic`, `catalog`, `codec_trim`, `legacy_player` (classic page with a fake DOM), `analysis` (JS vs Python fixture) |
+| `tests/test_web.py` | The local app: served files, nothing else exposed, catalogue facts, ranges/content types, analysis, synth validation/reproduction, exports and fixture current |
 | `tests/align_check.js` | Browser-side check used by the smoke test: compressed copies vs WAV (length, lag, correlation) |
 | `tests/test_synth.py` | Generated sounds: reproducible, seamless, unclipped, lengths/ids unchanged, generated.json current |
 | `tests/test_smoke.py` | Playwright smoke test against `python -m http.server` |
